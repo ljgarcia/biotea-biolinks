@@ -1,0 +1,73 @@
+<rdf:RDF
+    xmlns:aof="http://purl.org/ao/foaf/"
+    xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
+    xmlns:biotea="http://www.biotea.ws/ontology/ao_biotea.owl#"
+    xmlns:prov="http://www.w3.org/ns/prov#"
+    xmlns:void="http://rdfs.org/ns/void#"
+    xmlns:aoa="http://purl.org/ao/annotea/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:umls="http://bioportal.bioontology.org/ontologies/umls/"
+    xmlns:pav="http://purl.org/pav/"
+    xmlns:aos="http://purl.org/ao/selectors/"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:dcterms="http://purl.org/dc/terms/"
+    xmlns:aot="http://purl.org/ao/types/"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:ao="http://purl.org/ao/core/">
+  <biotea:Biolink rdf:about="http://biotea.ws/biolink/pubmed_resource/Biolink_da0caa243f436e14b94c46ba34f02613">
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pubmed_resource/AnnotatedConcept_5603e40f36ac97bdb92642f8f7843734">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C1709016"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >12.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pubmed_resource/AnnotatedConcept_83b5a342d8d8b48d442afb9fb30c6660">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0441889"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >3.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >2</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:onQueryDocument rdf:resource="http://biotea.ws/pubmeddoc/pubmed/12962547"/>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pubmed_resource/AnnotatedConcept_f6b64314e792f8a3eed51280ab8b489f">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0017262"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >6.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >2</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <pav:createdOn rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
+    >2015-11-19T20:25:23.988Z</pav:createdOn>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pubmed_resource/AnnotatedConcept_25d57c4f703e25012f060d481b728cd0">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0017337"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >4.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >5</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <pav:createdBy rdf:resource="http://biotea.ws/agent/rdf4pmc_serializer/"/>
+    <biotea:annotator rdf:resource="http://krono.act.uji.es/annotations/"/>
+    <biotea:score rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+    >0.32800147192585455</biotea:score>
+    <biotea:onRelatedDocument rdf:resource="http://biotea.ws/pubmeddoc/pubmed/12095422"/>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pubmed_resource/AnnotatedConcept_3aa02d36d45aea9a2d26abcfd3e63a26">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0449445"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >4.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+  </biotea:Biolink>
+</rdf:RDF>

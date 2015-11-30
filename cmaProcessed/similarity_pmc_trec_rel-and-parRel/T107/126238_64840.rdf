@@ -1,0 +1,2449 @@
+<rdf:RDF
+    xmlns:aof="http://purl.org/ao/foaf/"
+    xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
+    xmlns:biotea="http://www.biotea.ws/ontology/ao_biotea.owl#"
+    xmlns:prov="http://www.w3.org/ns/prov#"
+    xmlns:void="http://rdfs.org/ns/void#"
+    xmlns:aoa="http://purl.org/ao/annotea/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:umls="http://bioportal.bioontology.org/ontologies/umls/"
+    xmlns:pav="http://purl.org/pav/"
+    xmlns:aos="http://purl.org/ao/selectors/"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:dcterms="http://purl.org/dc/terms/"
+    xmlns:aot="http://purl.org/ao/types/"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:ao="http://purl.org/ao/core/">
+  <biotea:Biolink rdf:about="http://biotea.ws/biolink/pmc_resource/Biolink_59dfbb4b165820a654413fdef7b355d9">
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_7bb271dd9a27590913df3cd942443204">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C5585312"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >1.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >2</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_3527b18ea595c1893a28416df15665b4">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0205419"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >5.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_f6f6de60623332e67eba542cd49e915f">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0562342"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >6.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_110559e84158f783c741cfab568d278c">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C2348205"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >4.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >10</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_ddd3eab23f14895f46f949618d510b02">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0035696"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >14.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >3</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_37a5007cf4152c608c945b4576f67dbb">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0220922"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >5.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_aa8e52d70448faafa723cec146a1144c">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C7986804"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >6.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >6</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_a3c29d4e868bb776b63513ca6510208c">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0007634"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >8.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >11</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_beff03730ed85b88b6bdf4a97b871294">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0444667"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >2.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_130e40b33b2c3c7befa72b23ad6fa5a5">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C1521761"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >6.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >5</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_88f837ccd612210bca1720d7c4b764b7">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0522510"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >6.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >11</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_024f453d3237ab135f26c01856746c82">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0034037"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >4.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_79186f314762a207be28bf619875d5f4">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0023175"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >10.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_ed0e30dd136b11c824671526891f7511">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0444504"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >6.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >10</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_ec3d28e15e41d466a8e74954d188b35e">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C1706255"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >6.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >7</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_6d84e0c661cfcb8d414538814a92d78e">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C1519795"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >10.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_96fda64c03bc5863d3f3d52edb7381ed">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0439810"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >6.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >4</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_7de17d09b9cf109dc7b9a7455033ac3e">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C1524031"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >7.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >2</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_f10862e28ab083afb1143be7627e612c">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C1880833"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >9.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >8</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_661b2521ccbe6159f6caf2b75c1b956d">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0205409"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >5.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_07ae7a34946a671f068dd4b73e7e4c5b">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C1707391"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >4.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >5</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_cdfdba2d2a50b2d9fdc2defa0231c9cb">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0045143"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >13.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >2</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_70eac74074e047ed014b9f271d0fd769">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0443172"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >4.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >5</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_4d40ca6999d4f05ce9db4c60c12b750d">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C1705970"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >5.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >2</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_7bc468d11ad4df489cf35407092e3d05">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C1704434"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >8.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_9e2e3f98d224b7bc140ec65d0c96ac7e">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C2348867"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >4.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >6</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_7900a38b6d4c256edd015a1ebe490d00">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C5332294"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >4.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >5</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_1a6f026d7b47c4d71848a3f672abb555">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C1704788"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >4.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >3</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_a5471fd7791df899007565c3c8d36524">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0699809"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >4.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >7</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_ebe15b5f4b6adf07868a8828b7b90c1b">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C1722730"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >5.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_e43269406ce44b67c65b63d238117afd">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C2347274"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >22.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_c50e81cbdf0e30f556e9b4bbab680a2a">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C5936012"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >13.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >26</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_2b4573d156f6d48d1a20fd51c7792f3b">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C1547129"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >9.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_583b268a50bfe535efd8321039990347">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C5521115"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >5.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >2</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_4f74dca9778bba4f3b3aafebbe0c1a10">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0442726"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >5.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >40</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_ecff2e6c5afea74c82186d179dd2dacf">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0040649"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >11.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_a1fac64c13f6e33f7a3f52ec4b5a3508">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C2348040"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >10.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >4</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_f4d59347a59929de40533c971df8dcba">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C1709707"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >5.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >4</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_6f03a3ca7e8ed1a014765d45109431cc">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C1883310"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >5.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >2</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_a477f3708b3928ca7cd9c6bce159d956">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C2911648"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >7.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_974d780149c51c79140f38dac4c2b8f4">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C6579552"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >9.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_afa4bbda2a3534778bc76e4a5d97315c">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0205250"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >4.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >13</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_5310622b056f64a42cd39f12fa7001d6">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C1292732"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >5.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >3</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_5c5bce8312adb6f52894969b78f1d318">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C1548802"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >11.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >3</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_a984ebae29aa25ef8adebea7dac5d719">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0700325"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >11.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >2</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_a5ab91bfa3680aeb1e4bcfe36f8b7ac0">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0884358"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >3.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >4</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_f358ed13899d9cac7688d342fda2b14a">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C1707429"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >10.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_32bbdc0227e79a2e6442e7fcbf2c5ab3">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0871420"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >12.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_c87b49497783612896fc74c49c4dfcf3">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C2024467"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >1.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >2</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_c79320efbcadf30d7236699bad84f999">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C1517586"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >7.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >9</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_fa6fc7e45f5097da2521aaac857276c4">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0684224"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >5.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_c25da8a6890995b0a1c5b4b9f8b156f8">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0237849"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >13.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >8</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_6cf391eec3c886619277f643dc3d753d">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0205251"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >3.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >4</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_746917e6b84b6c399314d3c7156eecdb">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C9017851"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >14.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >2</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_c61c8e0cbada95ffea5e5a77582dd68d">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0243161"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >6.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >12</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_5e1115455dad11d6ddc3f297ed3387a8">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0205246"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >6.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >7</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_085dcf4cea813d6de0f17ea48be6773d">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0050325"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >30.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >3</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_734212f324c98972a4ac2fd41fbf25a0">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C1515021"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >6.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >9</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_d71f9c0ee92a633ce37f5fbdc9c0581f">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0456603"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >5.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >2</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_09030720151bdda3b7e7caf2070d5d4b">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0017262"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >6.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >72</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_e11c891f2aef4183543de8ce210b7bee">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C1524062"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >3.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >7</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_f0f38a433c0c797994e8c5d2eb86a078">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0036572"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >9.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >4</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_4f4059675f00ed1774498d663812ce4a">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0681814"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >7.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >13</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_e084f91b9567b27f536a87ee842739b6">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C2603343"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >3.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >4</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_41336266f261fa23069d90cbbb515580">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C2825518"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >10.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >3</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_8767be1ceacb4cd5f7eee2808b1a52af">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C5887808"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >9.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_bf1ef800fcbb5c21cb9c74a411cd091f">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C1512571"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >6.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >2</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_c7426e173a09427c4f00ee686a399fb7">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0392756"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >5.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >2</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_98569ecb6c4f0f9ec099469398aa8e3f">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0237691"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >15.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_5795e3a82d3695e2c81a8148836b25f1">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C5073433"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >6.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >2</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_15be8f4d19e59c6aef4478bf8c4e1c93">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C1705176"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >3.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >2</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_f1109317eaadd94e966404e021fa0bcb">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0699680"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >6.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_d0ae5803f430881aeb62be865994bbc6">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C8267746"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >3.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_1bd3f222c3cd693dd66411a8ba2be64c">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0205280"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >4.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >2</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_33f9f896e37d9a0a3836afe9344bd115">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C1300517"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >22.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >5</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_6a056b4cc9f5fa7be18d8bec19c80cef">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0023732"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >9.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >2</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_09a454928181bc3ecb5139cae32e58c0">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0009951"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >11.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_664ef86e1f1a2d2ed01a281765a52c54">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C2349182"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >4.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_b5e20d3b8d179dcc5075f999231a1d13">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0056208"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >11.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_ebbc3bbbed6ce16332a37bbca544fd93">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0035173"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >7.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >4</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_e91df4e253bb65289160b735d25b38f9">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C5564182"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >3.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_2a399cc6ea9e615a008cdfbec767b2a5">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C5020534"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >5.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_70cdd4c1938cc169265adb3dacce9bef">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0162326"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >10.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_254d938f5cd33b08f616f40a610b2915">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C1708943"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >5.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_b893bb8a45ec42b03c1e7b128a23168f">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C1705195"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >2.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >31</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_8c4674d2c2b0f8725dbdfdd5708bebf1">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C5439792"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >4.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_288671964989049ccef5862f5a586eaa">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C5640846"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >11.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >35</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_bcf88b0144d273bd5fc37e4f0ae11dc0">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0441889"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >3.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >9</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_4ec90bb2ee7a3f592c02c9eb14455d6d">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0205238"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >3.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_723935f38b5e277f0828e4962d413c26">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C1261552"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >4.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >5</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_68dc752b7658014686593cce44182dac">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C2350001"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >9.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >2</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_49f98969d43d86b385edc9e819056544">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C1547282"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >2.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >5</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_3d011f52dac89ffac1872a7267170412">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0332219"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >4.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >2</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_5be827f5c5a7d504f77b017791bee91f">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C1533691"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >8.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_f2993ae57cf9c011c435d0daed425943">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C2346714"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >6.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >4</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_66a7375d05c22e91c01b2ad90b8de4a3">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C1511790"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >6.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >21</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_577f4f90124d476b51d102de66d3c92d">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0205134"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >8.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >4</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_9d4e3afb66d37a619a6cc86a678dff78">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C1442488"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >7.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >3</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_cf9e841b9523dabcb6369e4e7d767b09">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C3244092"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >8.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >6</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_8db4b67dcebf123c235405ded856d8d5">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C2348144"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >6.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >7</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_35ffb4142cbb271013b0e3581bffcacf">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C1522410"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >5.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >2</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_4ac58a9dc34b83456cd6f749a31c64ef">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C1948059"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >4.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >2</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_73bd8b8ba527ff01776aa80079a1c793">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C2945746"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >6.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >10</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_7c63c93f364e846a031aa0d0bfd7414e">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0456389"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >6.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_9ee2915b23dd860a15acd6d37ebb1a75">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0185125"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >7.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >6</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_98bbe738d720f02749e4cc892b5d35c7">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C1708517"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >5.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >3</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_9284c8f8a6aef2720fccb98578e877c0">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C1979874"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >4.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >8</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_67a42189400f31c884cc9fe9d1fad35a">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C1521970"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >4.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >16</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_af15b96746cf0436a15c0b3de58aff10">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0449851"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >5.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >2</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_ef050c96f5593b2e241205a9f79ae40e">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C3146232"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >8.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_d3ca1c7c1a8d4c5476b94460bcc99338">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0679006"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >3.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_2bc90cdaad76a89b4a09eb6d4219010c">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0028953"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >10.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >5</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_3e7d88a99d6de4efe448744b9365cb4e">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0449255"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >4.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >2</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_cf8dde2a467bc70d275d9f9a0ac1a6ca">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0525069"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >11.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >2</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_7534df054f896a192ca8ececa3d00f6b">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0237753"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >8.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >18</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_655058a13778a127ee2398106efd477d">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0750502"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >4.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >6</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_63c8cf93b1f88130c6604791b1bc2fe0">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0700321"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >7.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_40520bae3c2fbd94532d98b3f10797a5">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C6171406"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >10.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >2</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_27e526c62ae7b5b14d76fe1e6ef828eb">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C1608299"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >10.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_159d520537d1726117a6cfecbe33d8f3">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C1704753"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >7.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_a123736101c95d4e21ee6ce3d60753a2">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0080103"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >4.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >5</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_1b3d3b181e23a1597236c8523d71396e">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0743559"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >4.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >4</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_784484e28a67ef8e526873addd4f46be">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0001721"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >8.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_c5f32c0811c43bf62f660d5026707c56">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C1706198"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >4.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_81feff32df98ec2cff4e485a52c0b443">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0439230"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >7.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_f942d8fa815ae287bca9e3387a3193f2">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C1519595"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >6.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >4</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_a9c03300e37c564ccebf2e525ef4d331">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C1546485"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >7.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_13697db182cadfa42aafffb776fb590b">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C1880177"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >5.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_43f89904278be283a03667b33aacfb16">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0086045"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >8.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_855ad79e89ca4ebbc8f11589fe101f25">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0370003"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >7.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >3</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_d003782a16a525fa4dd2b92ba6117a0e">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C2003888"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >5.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >3</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_359b8e534aa173cb85def7ee4846d118">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0392757"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >9.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >8</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_16d8be8d47d733a7c3c0fc13db90fa6e">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C5449514"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >4.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_93633925b7e42364888982678a706ea6">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0002045"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >6.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >16</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_11a48146c76915e2d88c03bb1f29f6b8">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0260397"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >10.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_936ef68959ea99bc386f53526b251244">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C1704324"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >5.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_8d5e698337d3aa1e88fe30de0ffeec14">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0017446"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >7.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_bfc3cba3f7f861f5ecd8b2a253e34c3c">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0205132"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >6.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >5</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_4ce1ee9de25a9856e6fd2de3721361cc">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C2828360"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >5.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_10e45cd594243aa04f06c467ddea5908">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0807955"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >7.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >5</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_94405b9731409149e396c3c25838f8f8">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C1510941"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >5.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >25</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_f8c3a503ee917fcf17a8e0fc40a0a2b5">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C2347609"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >9.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >14</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_203afba5cd05b5ddaf1eaf86b003f9ba">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0237400"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >3.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_349938d1ba1541da1d6fc889da4ac5cd">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0085732"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >3.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_8083a200b9809719ff056a091b0b4674">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0442821"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >3.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_6e6937ed9da373b9f9766385d4ef5875">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0026339"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >9.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >15</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_aef6f5c83bc03780ef4657e877085ef7">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C1880157"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >6.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >4</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_d8af8e38b25c92fc42fd44991dbec109">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C1522508"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >4.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_73809c3113d34e7bfc3f156c05c82d42">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C1704725"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >8.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >6</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_67c6d2745c628d05e9984e5d3af4b666">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C3146294"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >4.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >3</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_960b6eb595ddd5dc95365a4a07083624">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0549177"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >3.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >10</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_d27321e21875e8c86f83835f7bf8277e">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C1882508"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >6.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_b4f53d34707dff72dfc484ef5c306505">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0205341"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >6.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >5</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:score rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+    >0.3641119583222277</biotea:score>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_27d437d805a2ac8673a54e41f65f4b89">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C1704259"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >11.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >2</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_fff3a25ab64826b8cfa34a126c15d7c9">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0549193"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >9.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >2</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_c1cb0648e03fb91df38816ff973c20de">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0184661"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >10.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >21</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_761c5232d0e7f1a0eb5159fa93d4de69">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0443228"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >4.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_4a03ff4bf7a952310a94b632a95f0b94">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0206243"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >4.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >7</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_db57edff847331a0a17862a95af706ac">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0150098"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >7.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >31</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_f3bb73d6cc4c1598967888269f301a5a">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C1280500"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >3.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >9</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_0f7321f7b6bae9b22930473e37a8d7c9">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0022885"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >12.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >2</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_a6959f5e47b99bace55e43e86aa807cf">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0038215"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >7.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >23</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_be00d19343a740f1b8dac953f332a82b">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0679199"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >5.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >3</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_00a7fcd60e710aecd0cd874c2b0469a3">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0004793"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >14.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_65eabab00125b67485f38177efb27eaf">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C1519193"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >4.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_cabb1746e41b63658efe84002a87cbca">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C1947911"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >7.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >30</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_94e509d65dfd72c24f40f946c76e3d89">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0332462"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >8.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >7</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_3555d9874cecb9de93f06ba664b3b623">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C5337644"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >5.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >4</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_426031910cdc74e08206dbf7ab6159d4">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C1548355"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >10.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_ebe4bae6e6db5a666af8cd9574fb9fbf">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C1321571"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >18.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_57d06446381bf3c82779333e9c478873">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C2232707"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >19.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_4af7216e2f6729bd550e680eae1eeecc">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0220825"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >8.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_356bb5937ab79a717ddec1630ee3e445">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C5007118"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >11.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >3</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_8c2c837d4c33c55193a2144066614ea7">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C1709450"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >5.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >3</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_8861d8e0e2d031249338f3dca97a0cf4">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0680240"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >5.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >2</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_ae41be9eefdccc4659bdf2284aff8e57">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C1523987"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >4.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >2</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_3a7f2c6fc96543abaa5665f9b96509ae">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0332257"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >3.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_b03da8682ac566224ab26613514c79fa">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0237529"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >6.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >6</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_bdd3a169a82e675b4b9105a3891febb7">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C1441526"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >7.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >4</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_e2172ac4d8addde7f7066195edb30f0d">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0150312"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >2.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >4</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_afca8dcd7d7f9cd2eeaa81d4d151c7af">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C1299583"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >4.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >2</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_8a335b49c3bc66e503a9f105caf689db">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C2825408"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >6.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >5</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_5d2dbcbb19fad66b227a562b2379d348">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C1314939"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >6.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_5891f026076da6d08ba65d8f524db09e">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C1265611"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >6.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >2</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_eb06256cd2e8771ac544faf2cb12e45c">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0237401"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >3.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >2</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_bdfa829e0a8719bb9d12adf2c1037f83">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C1880519"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >10.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_02054df57d579ff341168fbc2354f2e9">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0449445"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >4.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >7</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_6d21f78fc2b31a881f4ef1da99e0dd2e">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C3245521"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >4.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >4</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_2a77a7f47539d8b39c9b9c53876c8c23">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C1442948"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >17.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_fd754da59afd1fad9dc4b0e26d23008e">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0005532"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >8.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_38bd51b5a5a08699e055e535c32fdab4">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C1522538"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >3.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_a9d75c9818f024d23279f05f565ec312">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C2828392"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >3.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >3</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:annotator rdf:resource="http://krono.act.uji.es/annotations/"/>
+    <pav:createdBy rdf:resource="http://biotea.ws/agent/rdf4pmc_serializer/"/>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_47a212af373b2aa7390fbefe938ff1e6">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C1947916"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >5.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >8</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_3bedfeb94128c4c98f2e925289015ec2">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0558058"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >5.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_824a88ec74fb8f94a200b3d228897dcc">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C1514721"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >9.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >2</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_52ea691f72a975fdf484301b9a5a8753">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C1554103"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >13.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_07f4f76f6828f5a526020159f51dcd77">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C5332120"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >4.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_f8ffe2b0fc526883c22da9b8c31b80e8">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0017337"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >4.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >91</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_d9e65aa2c4bc8ea396fdb075c4997718">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0205344"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >5.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >4</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_ea3ebe0258910ab277ee8e8d4e307379">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0242485"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >8.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >2</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_e7cadde1b4c9fb153d621557c8d98279">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C1879355"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >4.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >2</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_788a5fb861eac50982df24548de0c428">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C1552740"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >11.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >4</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:onQueryDocument rdf:resource="http://biotea.ws/pmcdoc/pmc/126238"/>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_56464fe8ff407961787fb37192f9e634">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C1948035"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >3.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_cd89ed6e3329eaf8868aed5bd85353bd">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C1547350"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >7.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >2</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_9a1baf7c8c13d9a5cb5bd9c0af8f2a2c">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C1515051"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >5.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >3</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_be836858cd297f0da3275e976e2fd17d">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C2064685"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >6.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_cefa79bf85b5951b9d84211b29e65364">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C1553889"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >6.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_e90e7edd5835935739925325614d9064">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0205393"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >2.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >8</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_c13047f5f96c9e8e95859ca3548e9677">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C1549782"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >10.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >3</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_475a9ee4f2e11a453a72aeb52cc0d559">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0600597"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >18.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >6</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_8d35bbd76eed403bb99e6b30a7a96ca6">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0205369"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >5.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >4</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_8e02300d77cfad998bcfc54fa09ffbda">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C1705938"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >7.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >15</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_eeb0063dd5187e14a656947cfdd9aab4">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C1705241"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >7.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >18</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_bdb998c359a46a19f068bdc0fac150f8">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C2740529"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >7.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >4</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:onRelatedDocument rdf:resource="http://biotea.ws/pmcdoc/pmc/64840"/>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_8832357862671bad0abb105f4456e7b5">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C1882115"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >8.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >83</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_435a08cdd154dfb170bca6af0cc0ea2b">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C5387437"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >8.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_9b5c11917bdd2b9e4518f95061840b20">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0027361"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >3.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >2</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_e629e7cd5685b9106b4da88886373dfc">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0750591"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >1.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >2</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_3681d2268936e661d9b6f0208c024d36">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C1517001"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >4.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_ecd181e8448a1f14c2f57750cdf402bc">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C2825142"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >5.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >10</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_d35f7ab5d25123450f75c3bb0351aeda">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0027552"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >3.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >3</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_3a34cdcee5abb9dd94c83a565d460809">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0235146"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >7.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >12</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_cc1dfb8c7239f21780f1167db90a9922">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0025663"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >4.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >31</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_f5404cd17aa0fabd0b60a12a6e916c99">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0034760"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >11.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_f35c15a930300edc6dfce00b0fb6a88a">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C6822100"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >3.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >3</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_113f83aa8c80ed160edc17a14d7b797b">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0522501"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >5.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >4</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_c0103699d0cb83659ec0084b30963ca3">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C5449915"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >3.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >2</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_b1973f8994f0e0c8cc6272ed9d17aba5">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C1261322"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >11.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >2</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_f55ed6cf94018acc5f6a9a674d1180dd">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C1707455"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >5.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >7</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_2954709d55161135682e098692c0778f">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C1114762"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >3.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >3</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_92e034fc6bc87fa54a34ff01a3502692">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0870411"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >10.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_e296ccbacc58b1c3042f42e602871864">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C1441547"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >5.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >4</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_f6c2f6b11fc78807b9fd6d52f5f3fc3a">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C5332128"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >5.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >5</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_d8255b31ead301b73d7bd278013b9b5b">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0332152"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >7.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >8</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_c10e8f9b67d324ed9b05f096b2590e0d">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C5014553"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >4.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >2</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_189b791c251f55945661a12ffc06d9fd">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C1710082"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >8.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >4</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_342a54ee532097817c60a43ec1946223">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0242821"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >3.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >20</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_1c174b54b8616284b9250aa4b6050698">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C1709843"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >7.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >3</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_6f4ba7eb5fb6d275dafe1de18feffa81">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C1704711"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >5.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_01c1e82f9df958f4ffedd5c9d9bee307">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0332232"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >4.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >2</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_d667539f6457cfaaa0cecd226b382e49">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0600596"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >13.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >10</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_a1c08722f24f6987602acea6c7b9833c">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C9017907"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >9.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >2</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_90ea8d853d79b48f88d209c21d070072">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C1707520"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >7.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >5</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_3ea882d9f44c9db18a05c70384fc5e10">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C1516084"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >3.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >2</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_2ee76662bb29f381e14f99410cfb7149">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0020202"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >10.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >5</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_73e38446fc3a7ad12414320032d4fb17">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0012634"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >5.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >12</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_1cea8a283de47e695ccc79e9c40ac426">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C1705178"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >3.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >2</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <pav:createdOn rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
+    >2015-11-18T22:26:33.845Z</pav:createdOn>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_5436839ebaae305d1c407b66fda3647f">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C1955272"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >12.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >2</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_19a96c152100303be66a901e5fe2752f">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C1879649"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >28.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >18</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_46715c1ea067fe1ece296cdd02d2a0b6">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0026809"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >8.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_35fa9e467c4477aa330151624e73ed65">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0596723"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >4.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >16</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_9f73358553e18aee13519108a8c01f71">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0427965"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >15.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >3</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_bb5165c0a85bfa3589836da505aca924">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0542559"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >7.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >3</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_a3e76a9ab7522fda6ec0c8c3a0408a22">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C1881865"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >8.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_d5a211d02dfa6c5fe52baf54b16c4a45">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0392366"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >4.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >3</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_73fa946f5c8f0b39250f601b5e7208e0">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0079411"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >4.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_903fa24a47ab3708a727f6553dec3de7">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C1554188"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >7.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >2</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_537d52f4800a5fd3930cf7196642f7ee">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0440470"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >3.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_51405c7523cea69e8b56b4ef75b8f28b">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0439165"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >8.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >3</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_26564a97574f16f178ab2ad75d5ffc77">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C1704726"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >5.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >6</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_ba741e18946007b1cb05137dd611ab84">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C5085801"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >7.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_4f0ba33ae5307429e4b978a26f614142">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0442739"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >8.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_08c9d28499a3a6f053999b157c840345">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0205195"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >4.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >31</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_c5e811badbef75c96fad71b33f45294f">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C1550471"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >7.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >2</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_88ebce0c6f964b638e7e6d7a0cebb87b">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C5566658"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >4.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_d8b0b048baa5543e63ee6cbc589bcf35">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0150103"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >5.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_19b7a3f2227392ae51fbb75d1b142b3c">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C6320301"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >5.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_9c9f1b0647b4aaab9d98f7ddb127fa89">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0178539"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >6.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >6</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+    <biotea:link>
+      <biotea:SemanticAnnotation rdf:about="http://biotea.ws/annotatedConcept/pmc_resource/AnnotatedConcept_4fdde55b14631d3d432450f50eaf3dd4">
+        <dcterms:references rdf:resource="http://bioportal.bioontology.org/ontologies/umls/C0037585"/>
+        <biotea:idf rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >6.0</biotea:idf>
+        <biotea:tf rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >2</biotea:tf>
+      </biotea:SemanticAnnotation>
+    </biotea:link>
+  </biotea:Biolink>
+</rdf:RDF>
