@@ -1,0 +1,133 @@
+{
+  "@graph" : [ {
+    "@id" : "http://biotea.ws/topicDistribution/pubmed_resource/Distribution_f8647c5644e632442c3d29cfdd94c91f",
+    "@type" : "biotea:TopicDistribution",
+    "createdBy" : "http://biotea.ws/agent/rdf4pmc_serializer/",
+    "createdOn" : "2015-12-01T17:23:38.542Z",
+    "annotator" : "http://krono.act.uji.es/annotations/",
+    "hasModel" : "http://biotea.ws/topicModel/pubmed_resource/Model_1448990618542",
+    "hasTopic" : [ "http://biotea.ws/topicModel/pubmed_resource/Topic_ACTI_f8647c5644e632442c3d29cfdd94c91f_1448990618542", "http://biotea.ws/topicModel/pubmed_resource/Topic_ANAT_f8647c5644e632442c3d29cfdd94c91f_1448990618542", "http://biotea.ws/topicModel/pubmed_resource/Topic_OBSV_f8647c5644e632442c3d29cfdd94c91f_1448990618542", "http://biotea.ws/topicModel/pubmed_resource/Topic_SYMP_f8647c5644e632442c3d29cfdd94c91f_1448990618542", "http://biotea.ws/topicModel/pubmed_resource/Topic_OBJC_f8647c5644e632442c3d29cfdd94c91f_1448990618542", "http://biotea.ws/topicModel/pubmed_resource/Topic_TAXA_f8647c5644e632442c3d29cfdd94c91f_1448990618542", "http://biotea.ws/topicModel/pubmed_resource/Topic_PHYS_f8647c5644e632442c3d29cfdd94c91f_1448990618542", "http://biotea.ws/topicModel/pubmed_resource/Topic_CHEM_f8647c5644e632442c3d29cfdd94c91f_1448990618542", "http://biotea.ws/topicModel/pubmed_resource/Topic_GENE_f8647c5644e632442c3d29cfdd94c91f_1448990618542", "http://biotea.ws/topicModel/pubmed_resource/Topic_PROC_f8647c5644e632442c3d29cfdd94c91f_1448990618542", "http://biotea.ws/topicModel/pubmed_resource/Topic_CONC_f8647c5644e632442c3d29cfdd94c91f_1448990618542", "http://biotea.ws/topicModel/pubmed_resource/Topic_GNPT_f8647c5644e632442c3d29cfdd94c91f_1448990618542" ],
+    "onDocument" : "http://biotea.ws/pubmeddoc/pubmed/11074587",
+    "totalTF" : "83"
+  }, {
+    "@id" : "http://biotea.ws/topicModel/pubmed_resource/Model_1448990618542",
+    "@type" : "biotea:Model",
+    "subject" : "http://biotea.ws/topicModel/biolinks",
+    "rdfs:label" : "biolinks"
+  }, {
+    "@id" : "http://biotea.ws/topicModel/pubmed_resource/Topic_ACTI_f8647c5644e632442c3d29cfdd94c91f_1448990618542",
+    "@type" : "biotea:Topic",
+    "biotea:score" : 0.014766458937625626,
+    "rdfs:label" : "ACTI"
+  }, {
+    "@id" : "http://biotea.ws/topicModel/pubmed_resource/Topic_ANAT_f8647c5644e632442c3d29cfdd94c91f_1448990618542",
+    "@type" : "biotea:Topic",
+    "biotea:score" : 0.013800393773295071,
+    "rdfs:label" : "ANAT"
+  }, {
+    "@id" : "http://biotea.ws/topicModel/pubmed_resource/Topic_CHEM_f8647c5644e632442c3d29cfdd94c91f_1448990618542",
+    "@type" : "biotea:Topic",
+    "biotea:score" : 0.013651459747108586,
+    "rdfs:label" : "CHEM"
+  }, {
+    "@id" : "http://biotea.ws/topicModel/pubmed_resource/Topic_CONC_f8647c5644e632442c3d29cfdd94c91f_1448990618542",
+    "@type" : "biotea:Topic",
+    "biotea:score" : 0.7219090125747872,
+    "rdfs:label" : "CONC"
+  }, {
+    "@id" : "http://biotea.ws/topicModel/pubmed_resource/Topic_GENE_f8647c5644e632442c3d29cfdd94c91f_1448990618542",
+    "@type" : "biotea:Topic",
+    "biotea:score" : 0.014059008908301111,
+    "rdfs:label" : "GENE"
+  }, {
+    "@id" : "http://biotea.ws/topicModel/pubmed_resource/Topic_GNPT_f8647c5644e632442c3d29cfdd94c91f_1448990618542",
+    "@type" : "biotea:Topic",
+    "biotea:score" : 0.016529792666793455,
+    "rdfs:label" : "GNPT"
+  }, {
+    "@id" : "http://biotea.ws/topicModel/pubmed_resource/Topic_OBJC_f8647c5644e632442c3d29cfdd94c91f_1448990618542",
+    "@type" : "biotea:Topic",
+    "biotea:score" : 0.013162934677112614,
+    "rdfs:label" : "OBJC"
+  }, {
+    "@id" : "http://biotea.ws/topicModel/pubmed_resource/Topic_OBSV_f8647c5644e632442c3d29cfdd94c91f_1448990618542",
+    "@type" : "biotea:Topic",
+    "biotea:score" : 0.013954283929431911,
+    "rdfs:label" : "OBSV"
+  }, {
+    "@id" : "http://biotea.ws/topicModel/pubmed_resource/Topic_PHYS_f8647c5644e632442c3d29cfdd94c91f_1448990618542",
+    "@type" : "biotea:Topic",
+    "biotea:score" : 0.017968639721870978,
+    "rdfs:label" : "PHYS"
+  }, {
+    "@id" : "http://biotea.ws/topicModel/pubmed_resource/Topic_PROC_f8647c5644e632442c3d29cfdd94c91f_1448990618542",
+    "@type" : "biotea:Topic",
+    "biotea:score" : 0.026556183724167577,
+    "rdfs:label" : "PROC"
+  }, {
+    "@id" : "http://biotea.ws/topicModel/pubmed_resource/Topic_SYMP_f8647c5644e632442c3d29cfdd94c91f_1448990618542",
+    "@type" : "biotea:Topic",
+    "biotea:score" : 0.01904634461326905,
+    "rdfs:label" : "SYMP"
+  }, {
+    "@id" : "http://biotea.ws/topicModel/pubmed_resource/Topic_TAXA_f8647c5644e632442c3d29cfdd94c91f_1448990618542",
+    "@type" : "biotea:Topic",
+    "biotea:score" : 0.013345845340035137,
+    "rdfs:label" : "TAXA"
+  } ],
+  "@context" : {
+    "score" : {
+      "@id" : "http://www.biotea.ws/ontology/ao_biotea.owl#score",
+      "@type" : "http://www.w3.org/2001/XMLSchema#double"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasTopic" : {
+      "@id" : "http://www.biotea.ws/ontology/ao_biotea.owl#hasTopic",
+      "@type" : "@id"
+    },
+    "createdBy" : {
+      "@id" : "http://purl.org/pav/createdBy",
+      "@type" : "@id"
+    },
+    "totalTF" : {
+      "@id" : "http://www.biotea.ws/ontology/ao_biotea.owl#totalTF",
+      "@type" : "http://www.w3.org/2001/XMLSchema#int"
+    },
+    "createdOn" : {
+      "@id" : "http://purl.org/pav/createdOn",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "onDocument" : {
+      "@id" : "http://www.biotea.ws/ontology/ao_biotea.owl#onDocument",
+      "@type" : "@id"
+    },
+    "annotator" : {
+      "@id" : "http://www.biotea.ws/ontology/ao_biotea.owl#annotator",
+      "@type" : "@id"
+    },
+    "hasModel" : {
+      "@id" : "http://www.biotea.ws/ontology/ao_biotea.owl#hasModel",
+      "@type" : "@id"
+    },
+    "subject" : "http://purl.org/dc/terms/subject",
+    "aof" : "http://purl.org/ao/foaf/",
+    "prov" : "http://www.w3.org/ns/prov#",
+    "aot" : "http://purl.org/ao/types/",
+    "foaf" : "http://xmlns.com/foaf/0.1/",
+    "xsp" : "http://www.owl-ontologies.com/2005/08/07/xsp.owl#",
+    "aos" : "http://purl.org/ao/selectors/",
+    "void" : "http://rdfs.org/ns/void#",
+    "aoa" : "http://purl.org/ao/annotea/",
+    "umls" : "http://bioportal.bioontology.org/ontologies/umls/",
+    "dcterms" : "http://purl.org/dc/terms/",
+    "rdfs" : "http://www.w3.org/2000/01/rdf-schema#",
+    "biotea" : "http://www.biotea.ws/ontology/ao_biotea.owl#",
+    "pav" : "http://purl.org/pav/",
+    "ao" : "http://purl.org/ao/core/",
+    "owl" : "http://www.w3.org/2002/07/owl#",
+    "rdf" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  }
+}
