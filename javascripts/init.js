@@ -4,6 +4,7 @@ var init = function() {
 
     self.selectedContent = 'ta';
     self.selectedTopic = '_100';
+    self.selectedArticle = 7866872;
 
     self.conSelect = undefined;
     self.topicsSelect = undefined;
@@ -44,6 +45,10 @@ var init = function() {
             });
 
         self.updateTopics();
+
+        var articleDiv = controls.append('div');
+        articleDiv.append('span').text('Selected Article: ');
+        articleDiv.append('span').text('');
     };
 
     self.updateTopics = function() {
@@ -86,6 +91,10 @@ var init = function() {
         self.topicDistribution.setIds(topicIds);
         self.topicDistribution.render();
     };
+
+    app.getDispatcher().on('selected', function(obj) {
+        console.log(obj);
+    });
 
     return self;
 }();
