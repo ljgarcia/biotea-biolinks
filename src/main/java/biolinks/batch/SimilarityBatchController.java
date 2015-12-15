@@ -69,7 +69,7 @@ public class SimilarityBatchController {
     			if ((biomodel != null) && (groups != null)) {
     				parser.parse(baseInFile, otherInFile, biomodel, groups);
     			} else {
-    				parser.parse(baseInFile, otherInFile);
+    				parser.parse(baseInFile, otherInFile, format);
     			}				
 				parser.serializeToModel(model, dao);
     		} else if (annotator == Annotator.NCBO) {

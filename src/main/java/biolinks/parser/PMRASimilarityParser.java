@@ -118,8 +118,22 @@ public class PMRASimilarityParser {
 	 * @throws FileNotFoundException 
 	 * @throws URISyntaxException 
 	 */
+	public Biolink parse(File givenDocFile, File analyzedDocFile, RDFFormat format) throws FileNotFoundException, ClassNotFoundException, OntologyLoadException, URISyntaxException {
+		return this.parse(givenDocFile, analyzedDocFile, null, null, format);
+	}
+	
+	/**
+	 * Parses similarity between two documents, it retrieves annotations from RDF/XML files.
+	 * @param givenDoc
+	 * @param analyzedDoc
+	 * @return
+	 * @throws OntologyLoadException 
+	 * @throws ClassNotFoundException 
+	 * @throws FileNotFoundException 
+	 * @throws URISyntaxException 
+	 */
 	public Biolink parse(File givenDocFile, File analyzedDocFile) throws FileNotFoundException, ClassNotFoundException, OntologyLoadException, URISyntaxException {
-		return this.parse(givenDocFile, analyzedDocFile, null, null);
+		return this.parse(givenDocFile, analyzedDocFile, null, null, RDFFormat.RDFXML_ABBREV);
 	}
 	
 	/**
@@ -134,6 +148,20 @@ public class PMRASimilarityParser {
 	 */
 	public Biolink parse(File givenDocFile, File analyzedDocFile, String model, List<String> groups) throws FileNotFoundException, ClassNotFoundException, OntologyLoadException, URISyntaxException {
 		return this.parse(givenDocFile, RDFFormat.RDFXML_ABBREV, analyzedDocFile, model, groups);
+	}
+	
+	/**
+	 * Parses similarity between two documents, it retrieves annotations from RDF/XML files.
+	 * @param givenDoc
+	 * @param analyzedDoc
+	 * @return
+	 * @throws OntologyLoadException 
+	 * @throws ClassNotFoundException 
+	 * @throws FileNotFoundException 
+	 * @throws URISyntaxException 
+	 */
+	public Biolink parse(File givenDocFile, File analyzedDocFile, String model, List<String> groups, RDFFormat format) throws FileNotFoundException, ClassNotFoundException, OntologyLoadException, URISyntaxException {
+		return this.parse(givenDocFile, format, analyzedDocFile, model, groups);
 	}
 	
 	/**
@@ -255,11 +283,11 @@ public class PMRASimilarityParser {
 								* probDocGivenTerm(analyzedAnnot.getFrequency() * givenAnnot.getIDF(), totalTermsAnalyzedDoc) 
 								* givenAnnot.getIDF();
 						add = true;				
-					} else {
+					} /*else {
 						numerator += probDocGivenTerm(givenAnnot.getFrequency() * givenAnnot.getIDF(), totalTermsGivenDoc) 
 								* probDocGivenTerm(0, totalTermsAnalyzedDoc) * givenAnnot.getIDF();
 						add = false;
-					}
+					}*/
 				}
 				if (addCommon && add) {
 					AnnotatedConcept annotConcept = new AnnotatedConcept();
