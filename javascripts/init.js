@@ -4,9 +4,8 @@ var init = function() {
 
     self.selectedContent = 'ta';
     self.selectedTopic = '_100';
-    self.selectedArticle = 7866872;
 
-    self.conSelect = undefined;
+    self.contentSelect = undefined;
     self.topicsSelect = undefined;
 
     self.contentOptions = undefined;
@@ -16,23 +15,24 @@ var init = function() {
         self.topicDistribution = new app({
             el: '#visDist'
         });
+
         var controls = d3.select('#controls');
 
         var contentDiv = controls.append('div');
         contentDiv.append('span').text('Type of content: ');
-        self.conSelect = contentDiv.append('span').append('select')
+        self.contentSelect = contentDiv.append('span').append('select')
             .attr('id', 'contentSelection')
             .on('change', function() {
-                var selectedIndex = self.conSelect.property('selectedIndex')
+                var selectedIndex = self.contentSelect.property('selectedIndex')
                 self.selectedContent = self.contentOptions[0][selectedIndex].__data__.value;
                 self.updateTopics();
             });
-        self.contentOptions = self.conSelect.selectAll('option')
+        self.contentOptions = self.contentSelect.selectAll('option')
             .data(contentType)
             .enter().append('option')
             .attr('value', function(type) {return type.value;})
             .text(function(type) {return type.text;});
-        self.conSelect.select('option').attr('selected', 'selected');
+        self.contentSelect.select('option').attr('selected', 'selected');
 
         var topicsDiv = controls.append('div');
         topicsDiv.append('span').text('TREC topic: ');
@@ -48,7 +48,20 @@ var init = function() {
 
         var articleDiv = controls.append('div');
         articleDiv.append('span').text('Selected Article: ');
-        articleDiv.append('span').text('');
+        var articleTitle = articleDiv.append('span').text('');
+
+        self.topicDistribution.getDispatcher().on('selected', function(obj) {
+            var collection;
+            if (self.selectedContent === 'ta') {
+                collection = pubmed_articles;
+            } else {
+                collection = pmc_articles;
+            }
+            var article = _.find(collection, function(el) {
+                return +obj.article === +el.id;
+            });
+            articleTitle.text(article.title);
+        });
     };
 
     self.updateTopics = function() {
@@ -91,10 +104,6 @@ var init = function() {
         self.topicDistribution.setIds(topicIds);
         self.topicDistribution.render();
     };
-
-    app.getDispatcher().on('selected', function(obj) {
-        console.log(obj);
-    });
 
     return self;
 }();
