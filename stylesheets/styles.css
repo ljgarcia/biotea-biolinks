@@ -19,7 +19,7 @@ body {
 }
 
 .wrapper {
-  width: 640px;
+  width: 860px;
   margin: 0 auto;
   background: #DEDEDE;
   -webkit-border-radius: 8px;
@@ -353,4 +353,21 @@ footer p + p {
   header p.view a small:before {
     content: 'at https://github.com/';
   }
+}
+
+/*customized styles*/
+h1 {
+    border-bottom: 1px solid #ccc;
+}
+
+select {
+    margin: 10px;
+    border: 1px solid #111;
+    background: white;
+    min-width: 200px;
+    max-width: 450px;
+    padding: 3px;
+    font-size: 12px;
+    border: 1px solid #ccc;
+    height: 34px;
 }

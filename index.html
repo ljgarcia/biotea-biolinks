@@ -1,84 +1,86 @@
 <!doctype html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Biotea-biolinks by ljgarcia</title>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="chrome=1">
+        <title>Biotea-Biolinks</title>
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/github-dark.css">
-    <script src="javascripts/scale.fix.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <link rel="stylesheet" href="stylesheets/styles.css">
+        <link rel="stylesheet" href="stylesheets/github-dark.css">
+        <script src="javascripts/scale.fix.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <h1>Biotea-biolinks</h1>
-        <p>Semantic similarity for articles annotated with biotea-annotation.</p>
-        <p class="view"><a href="https://github.com/ljgarcia/biotea-biolinks">View the Project on GitHub
-          <small>ljgarcia/biotea-biolinks</small></a></p>
-        <ul>
-          <li><a href="https://github.com/ljgarcia/biotea-biolinks/zipball/master">Download
-            <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/ljgarcia/biotea-biolinks/tarball/master">Download
-            <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/ljgarcia/biotea-biolinks">View On <strong>GitHub</strong></a></li>
-        </ul>
-      </header>
-      <section>
-        <h1>
-<a id="biotea-biolinks" class="anchor" href="#biotea-biolinks" aria-hidden="true">
-  <span class="octicon octicon-link"></span></a>biotea-biolinks</h1>
+        <!--[if lt IE 9]>
+        <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <div class="wrapper">
+        <header>
+            <h1>Biotea-Biolinks</h1>
+            <p>Semantic similarity for articles annotated with biotea-annotation.</p>
+            <p class="view"><a href="https://github.com/ljgarcia/biotea-biolinks">View the Project on GitHub
+                <small>ljgarcia/biotea-biolinks</small></a></p>
+            <ul>
+                <li><a href="https://github.com/ljgarcia/biotea-biolinks/zipball/master">Download
+                    <strong>ZIP File</strong></a></li>
+                <li><a href="https://github.com/ljgarcia/biotea-biolinks/tarball/master">Download
+                    <strong>TAR Ball</strong></a></li>
+                <li><a href="https://github.com/ljgarcia/biotea-biolinks">View On <strong>GitHub</strong></a></li>
+            </ul>
+        </header>
+        <section>
+            <h1>
+            <a id="biotea-biolinks" class="anchor" href="#biotea-biolinks" aria-hidden="true">
+            <span class="octicon octicon-link"></span></a>Biotea-Biolinks</h1>
 
-<p>Semantic similarity and topic distribution for articles annotated with biotea-annotation
-  (<a href="https://github.com/ljgarcia/biotea-annotation">https://github.com/ljgarcia/biotea-annotation</a>).
-  The topic distribution is based on Biolinks UMLS group reclasification.</p>
-        <p>
-          <a href="./topicDistribution.html">Biolinks working example for TREC 2005 articles</a> (keep reading if you
-            want to better understand the context of this example).
-        </p>
-        <h2>Dataset</h2>
-        <p>We annotated title-and-abstract as well as full-text articles for articles in the
-          <a href="http://trec.nist.gov/pubs/trec14/t14_proceedings.html" target="_blank">TREC 2005 Genomics Track
-            collection</a>. TREC 2005 Genomics Track comprises a ten-year subset of MEDLINE. It includes 34,633
-            unique PubMed identifiers (PMID) grouped in 50 topics corresponding to different information needs.
-            For each PMID within a particular topic, domain experts assigned a relevance judgment depending on
-            whether the article was not relevant, partially relevant, or relevant for the topic.
-            We included only those articles that were classified as relevant or partially relevant within the TREC
-            topics with at least both title and abstract, i.e., 4240 articles.
-            From those, only 62 have full-text content publicly available via PMC
-        </p>
-        <h2>Biotea-annotations in action</h2>
-        <p><a href="http://ljgarcia.github.io/biotea-annotation/annotation.html" target="_blank">
-          Here</a> you can see a working example of Biotea-annotations. We use the same dataset just described in the
-          previous paragraph.
-        </p>
-        <h2>Biotea-biolinks</h2>
-        <p>Biolinks relies on annotations following the schema proposed by
-          <a href="http://jbiomedsem.biomedcentral.com/articles/10.1186/2041-1480-4-S1-S5" target="_blank">
-          Biotea</a>. Biolinks uses semantic annotations together with term frequency and inverse document
-          frequence (tf-idf) in order to find a similarity score between a pair of scientific articles. The first
-          article is defined as the query article, i.e., an article for which a reader has already expressed
-          interested. The second article is defined as the related articles,
-          i.e., an article potentially interested for a reader knowing her/his interest in the query article.
-          The similarity metric used by Biolinks is
-          <a href="http://www.ncbi.nlm.nih.gov/pubmed/17971238" target="_blank">PMRA</a>. Reasons behind the selection
-          of this metric are explained <a href="http://www.ncbi.nlm.nih.gov/pubmed/26241356" target="_blank">here</a>.
-        </p>
-        <p>
-          Biolinks also calculates the UMLS group distribution for the TREC topics. Such distribution follows the
-          <a href="https://www.cs.princeton.edu/~blei/topicmodeling.html" target="_blank">topic modeling</a>
-          principles. However, rather than discovering topics, it uses UMLS semantic groups as predefined
-          topics and finds the distribution across UMLS groups for articles within a TREC topic,
-        </p>
-        <p>Here we present a <a href="./topicDistribution.html">working example</a> showing UMLS group distribution,
-          similarity and semantic annotations
-          for the 4240 selected articles from the TREC 2005 collection.
-        </p>
+            <p>Semantic similarity and topic distribution for articles annotated with biotea-annotation
+            (<a href="https://github.com/ljgarcia/biotea-annotation">https://github.com/ljgarcia/biotea-annotation</a>)
+            and topic distribution based on Biolinks UMLS group reclassification.</p>
+
+            <p>Biolinks relies on annotations following the schema proposed by
+                <a href="http://jbiomedsem.biomedcentral.com/articles/10.1186/2041-1480-4-S1-S5" target="_blank">
+                Biotea</a>. Biolinks uses semantic annotations together with term frequency and inverse document
+                frequence (tf-idf) in order to find a similarity score between a pair of scientific articles. The first
+                article is defined as the query article, i.e., an article for which a reader has already expressed
+                interested. The second article is defined as the related articles,
+                i.e., an article potentially interested for a reader knowing her/his interest in the query article.
+                The similarity metric used by Biolinks is
+                <a href="http://www.ncbi.nlm.nih.gov/pubmed/17971238" target="_blank">PMRA</a>. Reasons behind the selection
+                of this metric are explained <a href="http://www.ncbi.nlm.nih.gov/pubmed/26241356" target="_blank">here</a>.
+            </p>
+            <p>
+                Biolinks also calculates the UMLS group distribution for the TREC topics. Such distribution follows the
+                <a href="https://www.cs.princeton.edu/~blei/topicmodeling.html" target="_blank">topic modeling</a>
+                principles. However, rather than discovering topics, it uses UMLS semantic groups as predefined
+                topics and finds the distribution across UMLS groups for articles within a TREC topic. Biolinks works
+                with a reclassification of UMLS semantic groups.
+            </p>
+
+            <h2>Biotea-annotations</h2>
+            <p>
+                If you are interested in semantic annotations,
+                <a href="http://ljgarcia.github.io/biotea-annotation" target="_blank">here</a> you can
+                find more information about our semantic annotation project. We also have a
+                <a href="http://ljgarcia.github.io/biotea-annotation/annotation.html" target="_blank">working example
+                </a>. If you want to learn more about the dataset used, keep reading.
+            </p>
+
+            <h1 class="lineBehind">Biolinks in action</h1>
+            <p>Here we present a <a href="./topicDistribution.html">working example</a> showing how Biolinks works.
+                It includes topic distribution, semantic similarity and semantic annotations.</p>
+
+            <h2>Dataset</h2>
+            <p>We annotated title-and-abstract as well as full-text articles for articles in the
+                <a href="http://trec.nist.gov/pubs/trec14/t14_proceedings.html" target="_blank">TREC 2005 Genomics
+                Track collection</a>. TREC 2005 Genomics Track comprises a ten-year subset of MEDLINE. It includes
+                34,633 unique PubMed identifiers (PMID) grouped in 50 topics corresponding to different information
+                needs. For each PMID within a particular topic, domain experts assigned a relevance judgment
+                depending on whether the article was not relevant, partially relevant, or relevant for the topic.
+                We included only those articles that were classified as relevant or partially relevant within the TREC
+                topics with at least both title and abstract, i.e., 4240 articles.
+                From those, only 62 have full-text content publicly available via PMC
+            </p>
       </section>
     </div>
     <footer>

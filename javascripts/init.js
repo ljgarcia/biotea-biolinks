@@ -10,6 +10,7 @@ var init = function() {
 
     self.contentOptions = undefined;
     self.topicsOption = undefined;
+    self.articleTitle = undefined;
 
     self.start = function() {
         self.topicDistribution = new app({
@@ -48,7 +49,7 @@ var init = function() {
 
         var articleDiv = controls.append('div');
         articleDiv.append('span').text('Selected Article: ');
-        var articleTitle = articleDiv.append('span').text('');
+        self.articleTitle = articleDiv.append('span').text('Click on any column to select an article');
 
         self.topicDistribution.getDispatcher().on('selected', function(obj) {
             var collection;
@@ -60,7 +61,10 @@ var init = function() {
             var article = _.find(collection, function(el) {
                 return +obj.article === +el.id;
             });
-            articleTitle.text(article.title);
+            var articleText = article.title + ' (' +
+                (self.selectedContent === 'ta' ? 'PMID' : 'PMC') +
+                ':' + article.id + ')';
+            self.articleTitle.text(articleText);
         });
     };
 
@@ -103,6 +107,9 @@ var init = function() {
         self.topicDistribution.setPath(path);
         self.topicDistribution.setIds(topicIds);
         self.topicDistribution.render();
+        if (self.articleTitle !== undefined) {
+            self.articleTitle.text('Click on any column to select an article');
+        }
     };
 
     return self;
