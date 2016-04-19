@@ -7,13 +7,19 @@
     <script src="javascripts/scale.fix.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"
+            integrity="sha256-8WqyJLuWKRBVhxXIL1jBDD7SDxU936oZkCnxQbWwJVw="
+            crossorigin="anonymous"></script>
+    <!--script>var jQuery = jQuery.noConflict();</script-->
     <script src="http://d3js.org/d3.v3.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
 
     <script src="./javascripts/TopicDistributionViewer.min.js"></script>
+    <script src="./javascripts/SimilarityViewer.min.js"></script>
     <script src="./javascripts/config.js"></script>
     <script src="./javascripts/init.js"></script>
     <link rel="stylesheet" href="stylesheets/bioteaTopicDist.css">
+    <link rel="stylesheet" href="stylesheets/bioteaSimilarity.css">
     <style>
         div {
             padding: 2px;
@@ -32,6 +38,14 @@
             <h1>UMLS group distribution, similarity and semantic annotations</h1>
             <div id="controls"></div>
             <div id="visDist"></div>
+            <div id="simGroup">
+                <div id="simTitle"><h2>Similarity network</h2></div>
+                <div id="visSimilarity"></div>
+            </div>
+            <div id="annotGroup">
+                <div id="annotTitle"><h2>Annotation cloud</h2></div>
+                <div id="visAnnotation"></div>
+            </div>
         </section>
     </div>
 </body>

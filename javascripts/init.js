@@ -1,6 +1,7 @@
 var init = function() {
     var self = this;
     var app = require('biotea-vis-topicDistribution');
+    var appSimilarity = require('biotea-vis-similarity');
 
     self.selectedContent = 'ta';
     self.selectedTopic = '_100';
@@ -58,13 +59,42 @@ var init = function() {
             } else {
                 collection = pmc_articles;
             }
-            var article = _.find(collection, function(el) {
+            var selectedArticle = _.find(collection, function(el) {
                 return +obj.article === +el.id;
             });
-            var articleText = article.title + ' (' +
+            var articleText = selectedArticle.title + ' (' +
                 (self.selectedContent === 'ta' ? 'PMID' : 'PMC') +
-                ':' + article.id + ')';
+                ':' + selectedArticle.id + ')';
             self.articleTitle.text(articleText);
+
+            var topic = selectedArticle.topic.replace('_', 'T');
+            var path, db, articles;
+            if (selectedContent === 'ta') {
+                db = 'PubMed';
+                path = './pubmed-pmc/' + topic + '/';
+                articles = _.filter(pubmed_articles, function(elem) {
+                    return elem.topic === selectedArticle.topic;
+                });
+            } else {
+                db = 'PMC';
+                path = './pmc/' + topic + '/';
+                articles = _.filter(pmc_articles, function(elem) {
+                    return elem.topic === selectedArticle.topic;
+                });
+            }
+            var relatedIds = []
+            _.each(articles, function(elem) {
+                if (elem.id !== selectedArticle.id) {
+                    relatedIds.push(elem.id);
+                }
+            });
+            self.similarity = new appSimilarity({
+                el: '#visSimilarity',
+                path: path,
+                queryId: selectedArticle.id,
+                db: db,
+                relatedIds: relatedIds
+            });
         });
     };
 
