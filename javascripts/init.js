@@ -67,21 +67,24 @@ var init = function() {
                 ':' + selectedArticle.id + ')';
             self.articleTitle.text(articleText);
 
-            var topic = selectedArticle.topic.replace('_', 'T');
-            var path, db, articles;
-            if (selectedContent === 'ta') {
-                db = 'PubMed';
-                path = './pubmed-pmc/' + topic + '/';
-                articles = _.filter(pubmed_articles, function(elem) {
-                    return elem.topic === selectedArticle.topic;
-                });
-            } else {
-                db = 'PMC';
-                path = './pmc/' + topic + '/';
-                articles = _.filter(pmc_articles, function(elem) {
-                    return elem.topic === selectedArticle.topic;
-                });
-            }
+            self.updateSimilarity(selectedArticle);
+        });
+    };
+
+    self.updateSimilarity = function(selectedArticle) {
+        var topic = selectedArticle.topic.replace('_', 'T');
+        var path, db, articles;
+        if (selectedContent === 'ta') {
+            return;
+        } else {
+            db = 'PMC';
+            path = './pmc/' + topic + '/';
+            articles = _.filter(pmc_articles, function(elem) {
+                return elem.topic === selectedArticle.topic;
+            });
+        }
+
+        if (articles.length >= 3) {
             var relatedIds = []
             _.each(articles, function(elem) {
                 if (elem.id !== selectedArticle.id) {
@@ -95,7 +98,7 @@ var init = function() {
                 db: db,
                 relatedIds: relatedIds
             });
-        });
+        }
     };
 
     self.updateTopics = function() {
@@ -140,6 +143,7 @@ var init = function() {
         if (self.articleTitle !== undefined) {
             self.articleTitle.text('Click on any column to select an article');
         }
+        d3.select('#visSimilarity').selectAll('*').remove();
     };
 
     return self;
