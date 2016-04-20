@@ -12,6 +12,7 @@ var init = function() {
     self.contentOptions = undefined;
     self.topicsOption = undefined;
     self.articleTitle = undefined;
+    self.similarity = undefined;
 
     self.start = function() {
         self.topicDistribution = new app({
@@ -93,6 +94,11 @@ var init = function() {
                     relatedIdsTA.push(elem.pmid);
                 }
             });
+            if (self.similarity) {
+                self.similarity.stopForce();
+            }
+            d3.select('#visSimilarity').selectAll('*').remove();
+            d3.select('#visSimilarity').html('');
             self.similarity = new appSimilarity({
                 el: '#visSimilarity',
                 width: 450,
@@ -102,6 +108,7 @@ var init = function() {
                 db: "PMC",
                 relatedIds: relatedIdsFT
             });
+
             /*self.similarity = new appSimilarity({
                 el: '#visSimilarityTA',
                 width: 450,
