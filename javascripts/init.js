@@ -73,31 +73,44 @@ var init = function() {
 
     self.updateSimilarity = function(selectedArticle) {
         var topic = selectedArticle.topic.replace('_', 'T');
-        var path, db, articles;
+        var pathTA, pathFT, articles;
         if (selectedContent === 'ta') {
             return;
         } else {
-            db = 'PMC';
-            path = './pmc/' + topic + '/';
+            pathFT = './pmc/' + topic + '/';
+            pathTA = './pubmed-pmc/' + topic + '/';
             articles = _.filter(pmc_articles, function(elem) {
                 return elem.topic === selectedArticle.topic;
             });
         }
 
         if (articles.length >= 3) {
-            var relatedIds = []
+            var relatedIdsFT = [];
+            var relatedIdsTA = [];
             _.each(articles, function(elem) {
                 if (elem.id !== selectedArticle.id) {
-                    relatedIds.push(elem.id);
+                    relatedIdsFT.push(elem.id);
+                    relatedIdsTA.push(elem.pmid);
                 }
             });
             self.similarity = new appSimilarity({
                 el: '#visSimilarity',
-                path: path,
+                width: 450,
+                height: 300,
+                path: pathFT,
                 queryId: selectedArticle.id,
-                db: db,
-                relatedIds: relatedIds
+                db: "PMC",
+                relatedIds: relatedIdsFT
             });
+            /*self.similarity = new appSimilarity({
+                el: '#visSimilarityTA',
+                width: 450,
+                height: 300,
+                path: pathTA,
+                queryId: selectedArticle.pmid,
+                db: "PMID",
+                relatedIds: relatedIdsTA
+            });*/
         }
     };
 
@@ -140,8 +153,16 @@ var init = function() {
         self.topicDistribution.setPath(path);
         self.topicDistribution.setIds(topicIds);
         self.topicDistribution.render();
+
         if (self.articleTitle !== undefined) {
-            self.articleTitle.text('Click on any column to select an article');
+            if ((selectedContent !== 'ta') && (topicArticles.length >= 3)) {
+                d3.select('#simGroup').style('display', 'block');
+                self.articleTitle.text('Click on any column to display similarity network');
+            } else {
+                d3.select('#simGroup').style('display', 'none');
+                self.articleTitle.text('Click on any column to select an article');
+            }
+            d3.select('#annotGroup').style('display', 'none');
         }
         d3.select('#visSimilarity').selectAll('*').remove();
     };

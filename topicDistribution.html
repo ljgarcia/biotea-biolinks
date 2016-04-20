@@ -38,11 +38,20 @@
             <h1>UMLS group distribution, similarity and semantic annotations</h1>
             <div id="controls"></div>
             <div id="visDist"></div>
-            <div id="simGroup">
+            <div id="simGroup" style="display: none;">
                 <div id="simTitle"><h2>Similarity network</h2></div>
-                <div id="visSimilarity"></div>
+                <table border="0px">
+                    <tr>
+                        <th>Based on full content</th>
+                        <th>Based on title and abstract</th>
+                    </tr>
+                    <tr>
+                        <td id="visSimilarity"></td>
+                        <td id="visSimilarityTA"></td>
+                    </tr>
+                </table>
             </div>
-            <div id="annotGroup">
+            <div id="annotGroup" style="display: none">
                 <div id="annotTitle"><h2>Annotation cloud</h2></div>
                 <div id="visAnnotation"></div>
             </div>
