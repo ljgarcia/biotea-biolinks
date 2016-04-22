@@ -37,7 +37,8 @@ var init = function() {
             .enter().append('option')
             .attr('value', function(type) {return type.value;})
             .text(function(type) {return type.text;});
-        self.contentSelect.select('option').attr('selected', 'selected');
+        self.contentSelect.selectAll('option:nth-child(2)').attr('selected', 'selected');
+        self.selectedContent = 'fc';
 
         var topicsDiv = controls.append('div');
         topicsDiv.append('span').text('TREC topic: ');
@@ -49,11 +50,12 @@ var init = function() {
                 self.updateDistribution(selectedIndex);
             });
 
-        self.updateTopics();
-
         var articleDiv = controls.append('div');
         articleDiv.append('span').text('Selected Article: ');
-        self.articleTitle = articleDiv.append('span').text('Click on any column to select an article');
+        self.articleTitle = articleDiv.append('span').text('Click on any column in the distribution matrix to select'
+            + 'an article');
+
+        self.updateTopics();
 
         self.topicDistribution.getDispatcher().on('selected', function(obj) {
             var collection;
@@ -179,8 +181,8 @@ var init = function() {
             .attr('value', function(topic) {return topic.value;})
             .text(function(topic) {return topic.text;});
 
-        self.topicsSelect.select('option').attr('selected', 'selected');
-        self.updateDistribution(0);
+        self.topicsSelect.select('option:nth-child(2)').attr('selected', 'selected');
+        self.updateDistribution(1);
     };
 
     self.updateDistribution = function(selectedIndex) {
@@ -207,10 +209,11 @@ var init = function() {
         if (self.articleTitle !== undefined) {
             if ((selectedContent !== 'ta') && (topicArticles.length >= 3)) {
                 d3.select('#simGroup').style('display', 'block');
-                self.articleTitle.text('Click on any column to display similarity network');
+                self.articleTitle.text('Click on any column in the distribution matrix to select an article and ' +
+                    'display similarity network');
             } else {
                 d3.select('#simGroup').style('display', 'none');
-                self.articleTitle.text('Click on any column to select an article');
+                self.articleTitle.text('Click on any column in the distribution matrix to select an article');
             }
             d3.select('#annotGroup').style('display', 'none');
             d3.select('#clickNode').style('display', 'none');
