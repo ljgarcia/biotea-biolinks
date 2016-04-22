@@ -7,19 +7,19 @@
     <script src="javascripts/scale.fix.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
-    <script src="https://code.jquery.com/jquery-2.1.4.min.js"
-            integrity="sha256-8WqyJLuWKRBVhxXIL1jBDD7SDxU936oZkCnxQbWwJVw="
-            crossorigin="anonymous"></script>
+    <script src="./javascripts/jquery-2.1.4.min.js"></script>
     <!--script>var jQuery = jQuery.noConflict();</script-->
-    <script src="http://d3js.org/d3.v3.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+    <script src="./javascripts/d3.v3.min.js"></script>
+    <script src="./javascripts/underscore-1.8.3-min.js"></script>
 
     <script src="./javascripts/TopicDistributionViewer.min.js"></script>
     <script src="./javascripts/SimilarityViewer.min.js"></script>
+    <script src="./javascripts/AnnotationViewer.min.js"></script>
     <script src="./javascripts/config.js"></script>
     <script src="./javascripts/init.js"></script>
     <link rel="stylesheet" href="stylesheets/bioteaTopicDist.css">
     <link rel="stylesheet" href="stylesheets/bioteaSimilarity.css">
+    <link rel="stylesheet" href="stylesheets/bioteaAnnotation.css">
     <style>
         div {
             padding: 2px;
@@ -39,7 +39,10 @@
             <div id="controls"></div>
             <div id="visDist"></div>
             <div id="simGroup" style="display: none;">
-                <div id="simTitle"><h2>Similarity network</h2></div>
+                <div id="simTitle">
+                    <h2>Similarity network</h2>
+                    <span id="clickNode" style="display: none;">Click on any node for more information on annotations.</span>
+                </div>
                 <table border="0px">
                     <tr>
                         <th>Based on full content</th>
@@ -51,9 +54,18 @@
                     </tr>
                 </table>
             </div>
-            <div id="annotGroup" style="display: none">
-                <div id="annotTitle"><h2>Annotation cloud</h2></div>
-                <div id="visAnnotation"></div>
+            <div id="annotGroup" style="display: none;">
+                <div id="annotTitle"><h2>Cloud of annotations</h2></div>
+                <table border="0px">
+                    <tr>
+                        <th>Based on full content</th>
+                        <th>Based on title and abstract</th>
+                    </tr>
+                    <tr>
+                        <td id="visAnnotation"></td>
+                        <td id="visAnnotationTA"></td>
+                    </tr>
+                </table>
             </div>
         </section>
     </div>

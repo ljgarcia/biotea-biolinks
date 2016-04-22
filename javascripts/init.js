@@ -2,6 +2,7 @@ var init = function() {
     var self = this;
     var app = require('biotea-vis-topicDistribution');
     var appSimilarity = require('biotea-vis-similarity');
+    var appAnnotation = require('biotea-vis-annotation');
 
     self.selectedContent = 'ta';
     self.selectedTopic = '_100';
@@ -13,6 +14,7 @@ var init = function() {
     self.topicsOption = undefined;
     self.articleTitle = undefined;
     self.similarity = undefined;
+    self.similarityTA = undefined;
 
     self.start = function() {
         self.topicDistribution = new app({
@@ -72,6 +74,38 @@ var init = function() {
         });
     };
 
+    self.updateAnnotation = function(ftId, taId) {
+        d3.select('#annotGroup').style('display', 'block');
+
+        d3.select('#visAnnotation').selectAll('*').remove();
+        var annotation = new appAnnotation({
+            el: '#visAnnotation',
+            width: 400,
+            height: 500,
+            path: './pmc/',
+            id: ftId
+        });
+
+        d3.select('#visAnnotationTA').selectAll('*').remove();
+        var annotationTA = new appAnnotation({
+            el: '#visAnnotationTA',
+            width: 400,
+            height: 400,
+            path: './pubmed/',
+            id: taId
+        });
+    };
+
+    self.createSimilarity = function(similarity, elSimilarityId, opts) {
+        if (similarity) {
+            similarity.stopForce();
+        }
+        d3.select('#' + elSimilarityId).selectAll('*').remove();
+        d3.select('#' + elSimilarityId).html('');
+        var simil = new appSimilarity(opts);
+        return simil;
+    };
+
     self.updateSimilarity = function(selectedArticle) {
         var topic = selectedArticle.topic.replace('_', 'T');
         var pathTA, pathFT, articles;
@@ -94,30 +128,39 @@ var init = function() {
                     relatedIdsTA.push(elem.pmid);
                 }
             });
-            if (self.similarity) {
-                self.similarity.stopForce();
-            }
-            d3.select('#visSimilarity').selectAll('*').remove();
-            d3.select('#visSimilarity').html('');
-            self.similarity = new appSimilarity({
-                el: '#visSimilarity',
-                width: 450,
-                height: 300,
-                path: pathFT,
-                queryId: selectedArticle.id,
-                db: "PMC",
-                relatedIds: relatedIdsFT
+
+            self.similarity = self.createSimilarity(self.similarity, 'visSimilarity',
+                {
+                    el: '#visSimilarity', width: 400, height: 400,
+                    path: pathFT,
+                    queryId: selectedArticle.id, prefixId: "PMC", relatedIds: relatedIdsFT
+                }
+            );
+
+            self.similarity.getDispatcher().on('selected', function(obj) {
+                var pmid = _.find(articles, function(art) {
+                    return art.id === obj.datum.relatedId;
+                }).pmid;
+                self.updateAnnotation(obj.datum.relatedId, pmid);
             });
 
-            /*self.similarity = new appSimilarity({
-                el: '#visSimilarityTA',
-                width: 450,
-                height: 300,
-                path: pathTA,
-                queryId: selectedArticle.pmid,
-                db: "PMID",
-                relatedIds: relatedIdsTA
-            });*/
+            self.similarityTA = self.createSimilarity(self.similarityTA, 'visSimilarityTA',
+                {
+                    el: '#visSimilarityTA', width: 400, height: 400,
+                    path: pathTA, alternativeQueryId: selectedArticle.id,
+                    queryId: selectedArticle.pmid, prefixId: "PMID", relatedIds: relatedIdsTA,
+                    useAlternativeIds: true, alternativePrefixId: "PMC", alternativeRelatedIds: relatedIdsFT
+                }
+            );
+
+            self.similarityTA.getDispatcher().on('selected', function(obj) {
+                var pmcid = _.find(articles, function(art) {
+                    return art.id === obj.datum.altId;
+                }).id;
+                self.updateAnnotation(pmcid, obj.datum.relatedId);
+            });
+
+            d3.select('#clickNode').style('display', 'block');
         }
     };
 
@@ -170,6 +213,7 @@ var init = function() {
                 self.articleTitle.text('Click on any column to select an article');
             }
             d3.select('#annotGroup').style('display', 'none');
+            d3.select('#clickNode').style('display', 'none');
         }
         d3.select('#visSimilarity').selectAll('*').remove();
     };
