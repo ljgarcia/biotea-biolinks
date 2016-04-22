@@ -1,6 +1,6 @@
 var init = function() {
     var self = this;
-    var app = require('biotea-vis-topicDistribution');
+    var appTopic = require('biotea-vis-topicDistribution');
     var appSimilarity = require('biotea-vis-similarity');
     var appAnnotation = require('biotea-vis-annotation');
 
@@ -17,8 +17,9 @@ var init = function() {
     self.similarityTA = undefined;
 
     self.start = function() {
-        self.topicDistribution = new app({
-            el: '#visDist'
+        self.topicDistribution = new appTopic({
+            el: '#visDist',
+            width: 880
         });
 
         var controls = d3.select('#controls');
