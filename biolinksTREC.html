@@ -45,6 +45,7 @@
                     for an article. White means the group is not present in the article.
                     Hover and click any cell for more information.
                 </p>
+                <div id="selectedArticle"></div>
                 <div id="visDist" style="background-color: white;"></div>
             </div>
             <div id="simGroup" style="display: none;">
@@ -64,7 +65,10 @@
                 </table>
             </div>
             <div id="annotGroup" style="display: none;">
-                <div id="annotTitle"><h2>Cloud of annotations</h2></div>
+                <div id="annotTitle">
+                    <h2>Cloud of annotations</h2>
+                    <div id="annotatedArticle"></div>
+                </div>
                 <table border="0px">
                     <tr>
                         <th>Based on full content</th>
