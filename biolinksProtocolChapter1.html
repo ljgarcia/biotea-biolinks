@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-dark.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <script src="./javascripts/jquery-2.1.4.min.js"></script>
+    <!--script>var jQuery = jQuery.noConflict();</script-->
+    <script src="./javascripts/d3.v3.min.js"></script>
+    <script src="./javascripts/underscore-1.8.3-min.js"></script>
+
+    <script src="./javascripts/TopicDistributionViewer.min.js"></script>
+    <script src="./javascripts/SimilarityViewer.min.js"></script>
+    <script src="./javascripts/AnnotationViewer.min.js"></script>
+    <script src="./javascripts/config.js"></script>
+    <script src="./javascripts/init.js"></script>
+    <link rel="stylesheet" href="stylesheets/bioteaTopicDist.css">
+    <link rel="stylesheet" href="stylesheets/bioteaSimilarity.css">
+    <link rel="stylesheet" href="stylesheets/bioteaAnnotation.css">
+    <style>
+        div {
+            padding: 2px;
+        }
+        span {
+        padding: 2px;
+        }
+    </style>
+</head>
+<body onload="init.start();">
+    <div class="wrapper">
+        <header>
+            <h1>Biotea-Biolinks for Protocols book, Chapter 1</h1>
+        </header>
+        <section>
+            <h1>UMLS group distribution, similarity and semantic annotations</h1>
+            <div id="controls"></div>
+            <div>
+                <hr/>
+                <div><h2>UMLS group distribution</h2></div>
+                <p>
+                    Rows are groups and columns are articles, the darker a cell the more representative the UMLS group
+                    for an article. White means the group is not present in the article.
+                    Hover and click any cell for more information.
+                </p>
+                <div id="selectedArticle"></div>
+                <div id="visDist" style="background-color: white;"></div>
+            </div>
+            <div id="simGroup" style="display: none;">
+                <div id="simTitle">
+                    <h2>Similarity network</h2>
+                    <span id="clickNode" style="display: none;">Click on any node for more information on annotations.</span>
+                </div>
+                <div id="visSimilarity" ></div>
+            </div>
+            <div id="annotGroup" style="display: none;">
+                <div id="annotTitle">
+                    <h2>Cloud of annotations</h2>
+                    <div id="annotatedArticle"></div>
+                </div>
+                <div id="visAnnotation" style="background-color: white;"></div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
