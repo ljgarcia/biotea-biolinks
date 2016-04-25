@@ -1,5 +1,5 @@
 var protocolTopics = [
-      {value: 'chapter1', text: 'Chapter 1"'}
+      {value: 'chapter1', text: 'Chapter 1'}
   ];
 protocolTopics = _.sortBy(protocolTopics, function(t) {return t.text;});
 
