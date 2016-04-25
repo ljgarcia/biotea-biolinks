@@ -46,20 +46,19 @@ var init = function() {
             var selectedArticle = _.find(collection, function(el) {
                 return +obj.article === +el.id;
             });
-            var articleText = selectedArticle.title;
-            self.articleTitle.text(articleText);
+            self.articleTitle.text(selectedArticle.title);
 
             self.updateSimilarity(selectedArticle);
         });
     };
 
-    self.updateAnnotation = function(topic, ftId, articles) {
+    self.updateAnnotation = function(id, articles) {
         d3.select('#annotGroup').style('display', 'block');
         d3.select('#annotatedArticle').html('');
 
         d3.select('#annotatedArticle').html(function() {
             var annotArt = _.find(articles, function(art) {
-                return art.id === ftId;
+                return art.id === id;
             });
             return 'Annotated article: ' + annotArt.title;
         });
@@ -71,26 +70,22 @@ var init = function() {
             width: 400,
             height: 500,
             translation: -100,
-            path: './protocols/' + topic + '/',
+            path: './protocols/' + self.selectedTopic + '/annotations/',
             id: ftId
         });
     };
 
     self.updateSimilarity = function(selectedArticle) {
-        var topic = selectedArticle.topic;
-        var path = './protocols/' + topic + '/';
-            articles = _.filter(pmc_articles, function(elem) {
-                return elem.topic === selectedArticle.topic;
-            });
-        }
+        var path = './protocols/' + selectedArticle.topic + '/';
+        articles = _.filter(protocolArticles, function(elem) {
+            return elem.topic === selectedArticle.topic;
+        });
 
         if (articles.length >= 3) {
-            var relatedIdsFT = [];
-            var relatedIdsTA = [];
+            var relatedIds = [];
             _.each(articles, function(elem) {
                 if (elem.id !== selectedArticle.id) {
-                    relatedIdsFT.push(elem.id);
-                    relatedIdsTA.push(elem.pmid);
+                    relatedIds.push(elem.id);
                 }
             });
 
@@ -101,8 +96,8 @@ var init = function() {
             d3.select('#visSimilarity').html('');
             self.similarity = new appSimilarity({
                 el: '#visSimilarity', width: 400, height: 400,
-                path: pathFT,
-                queryId: selectedArticle.id, prefixId: "PMC", relatedIds: relatedIdsFT
+                path: path,
+                queryId: selectedArticle.id, prefixId: "", relatedIds: relatedIds
             });
 
             self.similarity.getDispatcher().on('selected', function(obj) {
@@ -113,8 +108,8 @@ var init = function() {
         }
     };
 
-    self.updateDistribution = function(topic, selectedIndex) {
-        var path = './protocols/' + topic + '/distribution/';
+    self.updateDistribution = function(selectedIndex) {
+        var path = './protocols/' + self.selectedTopic + '/distribution/';
         var topics = protocolTopics;
         var articles = protocolArticles;
 
