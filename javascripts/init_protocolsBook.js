@@ -33,18 +33,17 @@ var init = function() {
             .attr('value', function(topic) {return topic.value;})
             .text(function(topic) {return topic.text;});
 
-        self.updateDistribution(0);
-
         var articleDiv = d3.select('#selectedArticle');
         articleDiv.html('');
         articleDiv.append('span').text('Selected Article: ');
         self.articleTitle = articleDiv.append('span').text('Click on any column in the distribution matrix to select'
             + 'an article');
 
+        self.updateDistribution(0);
+
         self.topicDistribution.getDispatcher().on('selected', function(obj) {
-            var collection = protocolArticles;
-            var selectedArticle = _.find(collection, function(el) {
-                return +obj.article === +el.id;
+            var selectedArticle = _.find(protocolArticles, function(el) {
+                return obj.article === el.id;
             });
             self.articleTitle.text(selectedArticle.title);
 
@@ -65,27 +64,37 @@ var init = function() {
 
         d3.select('#visAnnotation').selectAll('*').remove();
         d3.select('#visAnnotation').html('');
+
+        var correctionX = Math.abs(Math.floor(
+            (document.documentElement.clientWidth - parseInt(d3.select('.wrapper').style('width'))) / 2
+        ));
+        var correctionY = Math.abs(Math.floor(
+            (parseInt(d3.select('.wrapper').style('height')) - parseInt(d3.select('section').style('height'))) / 2
+        ));
         var annotation = new appAnnotation({
             el: '#visAnnotation',
-            width: 400,
+            width: 880,
             height: 500,
-            translation: -100,
+            correctionX: -correctionX,
+            correctionY: -100,
             path: './protocols/' + self.selectedTopic + '/annotations/',
-            id: ftId
+            id: id
         });
     };
 
     self.updateSimilarity = function(selectedArticle) {
-        var path = './protocols/' + selectedArticle.topic + '/';
+        var path = './protocols/' + selectedArticle.topic + '/similarity/';
         articles = _.filter(protocolArticles, function(elem) {
             return elem.topic === selectedArticle.topic;
         });
 
         if (articles.length >= 3) {
             var relatedIds = [];
+            var altIds = [];
             _.each(articles, function(elem) {
                 if (elem.id !== selectedArticle.id) {
                     relatedIds.push(elem.id);
+                    altIds.push(elem.title);
                 }
             });
 
@@ -95,9 +104,9 @@ var init = function() {
             d3.select('#visSimilarity').selectAll('*').remove();
             d3.select('#visSimilarity').html('');
             self.similarity = new appSimilarity({
-                el: '#visSimilarity', width: 400, height: 400,
-                path: path,
-                queryId: selectedArticle.id, prefixId: "", relatedIds: relatedIds
+                el: '#visSimilarity', width: 880, height: 400,
+                path: path, alternativeRelatedIds: altIds, useAlternativeIds: true,
+                queryId: selectedArticle.id, prefixId: "", relatedIds: relatedIds, alternativePrefixId: ""
             });
 
             self.similarity.getDispatcher().on('selected', function(obj) {
@@ -117,9 +126,10 @@ var init = function() {
             return art.topic === topics[selectedIndex].value;
         });
         var topicIds = _.pluck(topicArticles, 'id');
+        var topicsDisplay = _.pluck(topicArticles, 'title');
 
         self.topicDistribution.setPath(path);
-        self.topicDistribution.setIds(topicIds);
+        self.topicDistribution.setIds(topicIds, topicsDisplay);
         self.topicDistribution.render();
 
         if (self.articleTitle !== undefined) {
