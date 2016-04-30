@@ -19,7 +19,8 @@ var init = function() {
     self.start = function() {
         self.topicDistribution = new appTopic({
             el: '#visDist',
-            width: 880
+            width: 880,
+            prefixId: 'PMC'
         });
 
         var controls = d3.select('#controls');
@@ -95,7 +96,6 @@ var init = function() {
             el: '#visAnnotation',
             width: 400,
             height: 500,
-            translation: -100,
             path: './pmc/',
             id: ftId
         });
@@ -200,15 +200,17 @@ var init = function() {
     };
 
     self.updateDistribution = function(selectedIndex) {
-        var path, topics, articles;
+        var path, topics, articles, prefix;
         if (selectedContent === 'ta') {
             path = './pubmed/';
             topics = pubmed_trecTopics;
             articles = pubmed_articles;
+            prefix = 'PMID';
         } else {
             path = './pmc/'
             topics = pmc_trecTopics;
             articles = pmc_articles;
+            prefix = 'PMC';
         }
 
         var topicArticles = _.filter(articles, function(art) {
@@ -218,6 +220,7 @@ var init = function() {
 
         self.topicDistribution.setPath(path);
         self.topicDistribution.setIds(topicIds);
+        self.topicDistribution.setPrefix(prefix);
         self.topicDistribution.render();
 
         if (self.articleTitle !== undefined) {

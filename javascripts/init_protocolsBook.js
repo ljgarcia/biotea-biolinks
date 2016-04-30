@@ -65,18 +65,10 @@ var init = function() {
         d3.select('#visAnnotation').selectAll('*').remove();
         d3.select('#visAnnotation').html('');
 
-        var correctionX = Math.abs(Math.floor(
-            (document.documentElement.clientWidth - parseInt(d3.select('.wrapper').style('width'))) / 2
-        ));
-        var correctionY = Math.abs(Math.floor(
-            (parseInt(d3.select('.wrapper').style('height')) - parseInt(d3.select('section').style('height'))) / 2
-        ));
         var annotation = new appAnnotation({
             el: '#visAnnotation',
             width: 880,
             height: 500,
-            correctionX: -correctionX,
-            correctionY: -100,
             path: './protocols/' + self.selectedTopic + '/annotations/',
             id: id
         });
