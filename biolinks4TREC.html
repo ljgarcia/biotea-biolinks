@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-dark.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <script src="./javascripts/underscore-1.8.3-min.js"></script>
+    <script src="./javascripts/config4TREC.js"></script>
+    <script src="./javascripts/BiolinksViewer.js"></script>
+    <link rel="stylesheet" href="stylesheets/bioteaBiolinks.css">
+    <!--style>
+        div, span {
+            padding: 2px;
+        }
+    </style-->
+
+    <script>
+        var start = function() {
+            var app = require("biotea-vis-biolinks");
+
+            var instance = new app({
+                el: '#biolinks',
+                content: TREConfig.content,
+                topics: TREConfig.topics,
+                articles: TREConfig.articles,
+                paths: {ft: './pmc/', ta: './pubmed/'}
+            });
+        }
+    </script>
+
+</head>
+<body onload="start();">
+    <div class="wrapper">
+        <header>
+            <h1>Biotea-Biolinks for TREC Genomic Track 2005</h1>
+        </header>
+        <section id="biolinks">
+
+        </section>
+    </div>
+</body>
+</html>
