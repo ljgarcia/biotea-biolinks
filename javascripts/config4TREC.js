@@ -57,6 +57,8 @@ _.each(pubmed_trecTopics, function(topic) {
 });
 pmc_trecTopics = _.sortBy(pmc_trecTopics, function(t){return t.text;});
 
+var pubmed_pmc_trecTopics = pmc_trecTopics;
+
 var pubmed_articles = [
     {topic: '_100', id: 7866872, title: 'Genetic transformation of plants by protoplast electroporation.'},
     {topic: '_100', id: 7873174, title: 'An optimized electroporation protocol applicable to a wide range of cell lines.'},
@@ -2548,24 +2550,95 @@ var pmc_articles = [
 
 pmc_articles = _.sortBy(pmc_articles, function(a) {return a.title;});
 
+var pubmed_pmc_articles = [
+    {topic: '_100', altId: 122059, id: 12175426, title: 'A comparison of efficacy and toxicity between electroporation and adenoviral gene transfer.'},
+    {topic: '_103', altId: 60307, id: 11737944, title: 'Detection of chromosomes tagged with green fluorescent protein in live Arabidopsis thaliana plants.'},
+    {topic: '_106', altId: 2173538, id: 14581449, title: 'Architecture of the budding yeast kinetochore reveals a conserved molecular core.'},
+    {topic: '_107', altId: 55328, id: 11532215, title: 'Cluster-Rasch models for microarray gene expression data.'},
+    {topic: '_107', altId: 59472, id: 11690545, title: 'A simple method for statistical analysis of intensity differences in microarray-derived gene expression data.'},
+    {topic: '_107', altId: 64840, id: 11790258, title: 'Evaluation of normalization procedures for oligonucleotide array data based on spiked cRNA controls.'},
+    {topic: '_107', altId: 115224, id: 12049663, title: 'How many replicates of arrays are required to detect gene expression changes in microarray experiments? A mixture model approach.'},
+    {topic: '_107', altId: 115254, id: 11983060, title: 'Permutation-validated principal components analysis of microarray data.'},
+    {topic: '_107', altId: 117238, id: 12095422, title: 'The limit fold change model: a practical approach for selecting differentially expressed genes from microarray data.'},
+    {topic: '_107', altId: 126238, id: 12184807, title: 'Profound effect of normalization on detection of differentially expressed genes in oligonucleotide microarray data analysis.'},
+    {topic: '_107', altId: 126242, id: 12184811, title: 'Normalization and analysis of DNA microarray data by self-consistency and local regression.'},
+    {topic: '_107', altId: 126873, id: 12225587, title: 'A new non-linear normalization method for reducing variability in DNA microarray experiments.'},
+    {topic: '_107', altId: 130049, id: 12354330, title: 'Cross-species hybridisation of pig RNA to human nylon microarrays.'},
+    {topic: '_107', altId: 133446, id: 12429061, title: 'Within the fold: assessing differential expression measures and reproducibility in microarray assays.'},
+    {topic: '_107', altId: 151173, id: 12537560, title: 'Bayesian analysis of gene expression levels: statistical quantification of relative mRNA level across multiple strains or treatments.'},
+    {topic: '_107', altId: 153502, id: 12659637, title: 'Modeling gene expression measurement error: a quasi-likelihood approach.'},
+    {topic: '_107', altId: 165429, id: 12803655, title: 'The construction and use of bacterial DNA microarrays based on an optimized two-stage PCR strategy.'},
+    {topic: '_107', altId: 166151, id: 12823867, title: 'Statistical implications of pooling RNA samples for microarray experiments.'},
+    {topic: '_107', altId: 194174, id: 12930545, title: 'The Longhorn Array Database (LAD): an open-source, MIAME compliant implementation of the Stanford Microarray Database (SMD).'},
+    {topic: '_107', altId: 200968, id: 12950995, title: 'Evaluation of normalization methods for microarray data.'},
+    {topic: '_107', altId: 212256, id: 12962547, title: 'Sex genes for genomic analysis in human brain: internal controls for comparison of probe level data extraction.'},
+    {topic: '_107', altId: 222958, id: 12967349, title: 'Probabilistic estimation of microarray data reliability and underlying gene expression.'},
+    {topic: '_108', altId: 32300, id: 11401727, title: 'Dimerization of receptor protein-tyrosine phosphatase alpha in living cells.'},
+    {topic: '_108', altId: 2133138, id: 10352017, title: 'Yeast Bim1p promotes the G1-specific dynamics of microtubules.'},
+    {topic: '_108', altId: 2141630, id: 9245791, title: 'Microtubules orient the mitotic spindle in yeast through dynein-dependent interactions with the cell cortex.'},
+    {topic: '_108', altId: 2173363, id: 12615908, title: 'Fluorescence resonance energy transfer (FRET) microscopy imaging of live cell protein localizations.'},
+    {topic: '_108', altId: 2173966, id: 14517204, title: 'Direct measurement of Gag-Gag interaction during retrovirus assembly with FRET and fluorescence correlation spectroscopy.'},
+    {topic: '_108', altId: 2174343, id: 11381093, title: 'Nucleolar assembly of the rRNA processing machinery in living cells.'},
+    {topic: '_111', altId: 3054509, id: 9681800, title: 'Molecular analysis of prion protein gene (PRNP) in Korean patients with Creutzfeldt-Jakob disease.'},
+    {topic: '_114', altId: 59693, id: 11707154, title: 'COL11A1 in FAP polyps and in sporadic colorectal tumors.'},
+    {topic: '_114', altId: 2134811, id: 9015311, title: 'Adenomatous polyposis coli tumor suppressor protein has signaling activity in Xenopus laevis embryos resulting in the induction of an ectopic dorsoanterior axis.'},
+    {topic: '_114', altId: 2150417, id: 9649126, title: 'Mutations of the Apc gene in experimental colorectal carcinogenesis induced by azoxymethane in F344 rats.'},
+    {topic: '_119', altId: 13914, id: 11056682, title: 'Glutathione S-transferase M1 null genotype: lack of association with tumour characteristics and survival in advanced breast cancer.'},
+    {topic: '_119', altId: 2376773, id: 12556960, title: 'Glutathione S-transferase M1 and T1 genetic polymorphisms, alcohol consumption and breast cancer risk.'},
+    {topic: '_119', altId: 2394332, id: 14562023, title: 'Glutathione S-transferases (GSTT1 and GSTM1) gene deletions in Tunisians: susceptibility and prognostic implications in breast carcinoma.'},
+    {topic: '_120', altId: 2150137, id: 9569056, title: 'NM23-H1 immunostaining is inversely associated with tumour staging but not overall survival or disease recurrence in colorectal carcinomas.'},
+    {topic: '_120', altId: 3053896, id: 8924224, title: 'Expression of p53 and NDP-K/nm23 in gastric carcinomas--association with metastasis and clinicopathologic parameters.'},
+    {topic: '_120', altId: 3054057, id: 8593205, title: 'Analysis of nm23 expression as a prognostic parameter in renal cell carcinoma.'},
+    {topic: '_120', altId: 3054140, id: 7576301, title: 'Expression of the nucleoside diphosphate kinase in human skin cancers: an immunohistochemical study.'},
+    {topic: '_120', altId: 3054328, id: 9443089, title: 'Role of the nm23-H1 gene in the metastasis of gastric cancer.'},
+    {topic: '_121', altId: 138716, id: 11879553, title: 'Distinct functions of BRCA1 and BRCA2 in double-strand break repair.'},
+    {topic: '_121', altId: 2133073, id: 9832560, title: 'In vitro repression of Brca1-associated RING domain gene, Bard1, induces phenotypic changes in mammary epithelial cells.'},
+    {topic: '_122', altId: 2150807, id: 11564752, title: 'Where is APC going?'},
+    {topic: '_122', altId: 2156123, id: 10491393, title: 'Drosophila APC2 is a cytoskeletally-associated protein that regulates wingless signaling in the embryonic epidermis.'},
+    {topic: '_122', altId: 2174057, id: 12058019, title: 'The adenomatous polyposis coli protein unambiguously localizes to microtubule plus ends and is involved in establishing parallel arrays of microtubule bundles in highly polarized epithelial cells.'},
+    {topic: '_122', altId: 2174811, id: 10662776, title: 'Adenomatous polyposis coli (APC) protein moves along microtubules and concentrates at their growing ends in epithelial cells.'},
+    {topic: '_122', altId: 2196003, id: 11157977, title: 'Apical membrane localization of the adenomatous polyposis coli tumor suppressor protein and subcellular distribution of the beta-catenin destruction complex in polarized epithelial cells.'},
+    {topic: '_123', altId: 2172646, id: 12538638, title: 'Traffic-independent function of the Sar1p/COPII machinery in proteasomal sorting of the cystic fibrosis transmembrane conductance regulator.'},
+    {topic: '_123', altId: 2174359, id: 11086000, title: 'Lst1p and Sec24p cooperate in sorting of the plasma membrane ATPase into COPII vesicles in Saccharomyces cerevisiae.'},
+    {topic: '_124', altId: 2185520, id: 11285283, title: 'Nucleolar components involved in ribosome biogenesis cycle between the nucleolus and nucleoplasm in interphase cells.'},
+    {topic: '_126', altId: 2173124, id: 12135983, title: 'Scotin, a novel p53-inducible proapoptotic protein located in the ER and the nuclear membrane.'},
+    {topic: '_126', altId: 2198828, id: 11591730, title: 'APAF1 is a key transcriptional target for p53 in the regulation of neuronal cell death.'},
+    {topic: '_126', altId: 2212285, id: 9584145, title: 'Roles of the tumor suppressor p53 and the cyclin-dependent kinase inhibitor p21WAF1/CIP1 in receptor-mediated apoptosis of WEHI 231 B lymphoma cells.'},
+    {topic: '_126', altId: 2375280, id: 11870542, title: 'Co-transduction of Apaf-1 and caspase-9 highly enhances p53-mediated apoptosis in gliomas.'},
+    {topic: '_132', altId: 2133187, id: 10330400, title: 'Overexpression of protein kinase C betaII induces colonic hyperproliferation and increased sensitivity to colon carcinogenesis.'},
+    {topic: '_139', altId: 2149344, id: 9732293, title: 'The RET-glial cell-derived neurotrophic factor (GDNF) pathway stimulates migration and chemoattraction of epithelial cells.'},
+    {topic: '_139', altId: 2172872, id: 12682085, title: 'GDNF promotes tubulogenesis of GFRalpha1-expressing MDCK cells by Src-mediated phosphorylation of Met receptor tyrosine kinase.'},
+    {topic: '_141', altId: 2173440, id: 14557250, title: 'Huntingtin forms toxic NH2-terminal fragment complexes that are promoted by the age-dependent decrease in proteasome activity.'},
+    {topic: '_146', altId: 244923, id: 12429067, title: 'The presenilins.'},
+    {topic: '_146', altId: 2173840, id: 12147673, title: 'Presenilin-1 affects trafficking and processing of betaAPP and is targeted in a complex with nicastrin to the plasma membrane.'},
+    {topic: '_146', altId: 2174229, id: 10525535, title: 'Presenilin 1 controls gamma-secretase processing of amyloid precursor protein in pre-golgi compartments of hippocampal neurons.'},
+    {topic: '_146', altId: 2174559, id: 10811821, title: 'Capacitative calcium entry deficits and elevated luminal calcium content in mutant presenilin-1 knockin mice.'}
+];
+
+pubmed_pmc_articles = _.sortBy(pubmed_pmc_articles, function(a) {return a.title;});
+
 var TREConfig = function() {
     var self = this;
 
     self.content = [
         {label: 'ft', text: 'Full content', prefix: 'PMC', altPrefix: 'PMID',
             url: 'http://www.ncbi.nlm.nih.gov/pmc/articles/PMC'},
+        {label: 'ta_ft', text: 'Title and abstract for full-text articles', prefix: 'PMID', altPrefix: 'PMC',
+            url: 'http://www.ncbi.nlm.nih.gov/pubmed/'},
         {label: 'ta', text: 'Title and abstract', prefix: 'PMID', altPrefix: 'PMC',
             url: 'http://www.ncbi.nlm.nih.gov/pubmed/'}
     ]
 
     self.topics = {
         ft: pmc_trecTopics,
-        ta: pubmed_trecTopics
+        ta: pubmed_trecTopics,
+        ta_ft: pubmed_pmc_trecTopics
     };
 
     self.articles = {
         ft: pmc_articles,
-        ta: pubmed_articles
+        ta: pubmed_articles,
+        ta_ft: pubmed_pmc_articles
     };
 
     return self;
