@@ -2624,7 +2624,7 @@ var TREConfig = function() {
         {label: 'ft', text: 'Full content', prefix: 'PMC', altPrefix: 'PMID',
             url: 'http://www.ncbi.nlm.nih.gov/pmc/articles/PMC'},
         {label: 'ta_ft', text: 'Title and abstract for full-text articles', prefix: 'PMID', altPrefix: 'PMC',
-            url: 'http://www.ncbi.nlm.nih.gov/pubmed/'},
+            url: 'http://www.ncbi.nlm.nih.gov/pubmed/', useAltId: true},
         {label: 'ta', text: 'Title and abstract', prefix: 'PMID', altPrefix: 'PMC',
             url: 'http://www.ncbi.nlm.nih.gov/pubmed/'}
     ]
