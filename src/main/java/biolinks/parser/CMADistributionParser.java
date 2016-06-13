@@ -154,7 +154,7 @@ public class CMADistributionParser implements TopicDistributionParser {
 			if (this.belongsToGroup(types, annot)) {
 				weight += Math.pow(
 						1 + (
-								Math.pow(this.PMRA_MIU/this.PMRA_LAMBDA, annot.getFrequency()-1) *
+								Math.pow(this.PMRA_MIU/this.PMRA_LAMBDA, annot.getFrequency()*annot.getIDF() - 1) *
 								Math.pow(Math.E, -(this.PMRA_MIU - this.PMRA_LAMBDA) * totalTF)
 							)
 						, -1);
