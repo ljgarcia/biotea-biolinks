@@ -18,7 +18,7 @@
         <div class="wrapper">
         <header>
             <h1>Biotea-Biolinks</h1>
-            <p>Semantic similarity for articles annotated with biotea-annotation.</p>
+            <p>Semantic-based distribution and similarity for scientific publications.</p>
             <p class="view"><a href="https://github.com/ljgarcia/biotea-biolinks">View the Project on GitHub
                 <small>ljgarcia/biotea-biolinks</small></a></p>
             <ul>
@@ -58,13 +58,51 @@
             </p>
             <p><strong><a href="./biolinks4TREC.html">Example using Genomic Track TREC-2005 data</a></strong></p>
 
+            <h2>Biolinks visualization</h2>
+            <p>
+                We have created one parser, four visual components and one helper component so it would be easier for
+                us to analyze annotated articles.
+                <ul>
+                    <li>
+                        <a href="https://github.com/ljgarcia/biotea-io-parser">biotea-io-parser</a> loads annotated
+                        articles from JSON-LD files. I also calculates group-based (topic) distribution and semantic
+                        similarity based on semantic annotations.
+                    </li>
+                    <li>
+                        <a href="https://github.com/ljgarcia/biotea-vis-annotations">biotea-vis-annotations</a>
+                        provides a cloud of tags visualization for annotations. It locally depends on biotea-io-parser
+                        and biotea-vis-tooltip.
+                    </li>
+                    <li>
+                        <a href="https://github.com/ljgarcia/biotea-vis-topicDistribution">biotea-vis-topicDistribution
+                        </a> provides a heatmap visualization for group-based distribution. It locally depends on
+                        biotea-io-parser and biotea-vis-tooltip.
+                    </li>
+                    <li>
+                        <a href="https://github.com/ljgarcia/biotea-vis-similarity">biotea-vis-similarity</a>
+                        provides a force graph layout for similarity networks. It locally depends on
+                        biotea-io-parser and biotea-vis-tooltip.
+                    </li>
+                    <li>
+                        <a href="https://github.com/ljgarcia/biotea-vis-biolinks">biotea-vis-biolinks</a> provides a
+                        showcase using data from TREC-05 GEnomics Track collection. More information on this dataset
+                        at the end of this page.  It locally depends on
+                        biotea-io-parser, biotea-vis-annotations, biotea-vis-topicDistribution,
+                        biotea-vis-similarity and biotea-vis-tooltip.
+                    </li>
+                    <li>
+                        <a href="https://github.com/ljgarcia/biotea-vis-tooltip">biotea-vis-tooltip</a> provides a
+                        tooltip used in the visualization components.
+                    </li>
+                </ul>
+            </p>
+
             <h2>Biotea-annotations</h2>
             <p>
                 If you are interested in semantic annotations,
                 <a href="http://ljgarcia.github.io/biotea-annotation" target="_blank">here</a> you can
-                find more information about our semantic annotation project. We also have a
-                <a href="http://ljgarcia.github.io/biotea-annotation/annotation.html" target="_blank">working example
-                </a>. If you want to learn more about the dataset used, keep reading.
+                find more information about our semantic annotation project.
+                If you want to learn more about the dataset used, please keep reading.
             </p>
 
             <h1 class="lineBehind">Biolinks in action</h1>
@@ -80,7 +118,7 @@
                 depending on whether the article was not relevant, partially relevant, or relevant for the topic.
                 We included only those articles that were classified as relevant or partially relevant within the TREC
                 topics with at least both title and abstract, i.e., 4240 articles.
-                From those, only 62 have full-text content publicly available via PMC
+                From those, only 62 have full-text content publicly available via PMC-OA.
             </p>
       </section>
     </div>
