@@ -32,6 +32,28 @@
                 noLambda: false
             });
 /*
+            var allGroups = [
+                {grp:'ACTI', total:0, totalTF:0},
+                {grp:'ANAT', total:0, totalTF:0},
+                {grp:'CHEM', total:0, totalTF:0},
+                {grp:'CONC', total:0, totalTF:0},
+                {grp:'DEVI', total:0, totalTF:0},
+                {grp:'DISO', total:0, totalTF:0},
+                {grp:'DRUG', total:0, totalTF:0},
+                {grp:'GENE', total:0, totalTF:0},
+                {grp:'GEOG', total:0, totalTF:0},
+                {grp:'GNPT', total:0, totalTF:0},
+                {grp:'OBJC', total:0, totalTF:0},
+                {grp:'OBSV', total:0, totalTF:0},
+                {grp:'OCCU', total:0, totalTF:0},
+                {grp:'ORGA', total:0, totalTF:0},
+                {grp:'PEOP', total:0, totalTF:0},
+                {grp:'PHEN', total:0, totalTF:0},
+                {grp:'PHYS', total:0, totalTF:0},
+                {grp:'PROC', total:0, totalTF:0},
+                {grp:'SYMP', total:0, totalTF:0},
+                {grp:'TAXA', total:0, totalTF:0},
+            ];
             var ft = function(topics, index, limit, allArticles, path) {
                 var topic = topics[index];
                 var result = {
@@ -76,7 +98,7 @@
                             if (groupBy[group.grp]) {
                                 group.total += groupBy[group.grp].length;
                                 _.each(groupBy[group.grp], function(annot) {
-                                    group.totalTF += annot.tf;
+                                    group.totalTF += annot.tf * annot.idf;
                                 });
                             }
                         });
@@ -86,10 +108,18 @@
                 });
                 $.when.apply(null, loaders).done(function () {
                     console.log(JSON.stringify(result));
+                    _.each(result.groups, function(group) {
+                        var totalGroup = _.find(allGroups, function(datum) {return group.grp === datum.grp});
+                        totalGroup.total += group.total;
+                        totalGroup.totalTF += group.totalTF;
+                    });
                     index++;
                     if (index < limit) {
                         ft(topics, index, limit, allArticles, path);
                     } else {
+                        _.each(allGroups, function(group) {
+                            console.log(group.grp + '\t' + group.total + '\t' + group.totalTF + '\t');
+                        });
                         console.log('END');
                     }
                 });
