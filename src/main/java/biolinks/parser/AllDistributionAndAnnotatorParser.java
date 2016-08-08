@@ -10,8 +10,10 @@ import java.util.List;
 import org.apache.jena.riot.RDFFormat;
 import org.apache.log4j.Logger;
 
+import ws.biotea.ld2rdf.annotation.exception.ArticleParserException;
 import ws.biotea.ld2rdf.annotation.exception.NoResponseException;
 import ws.biotea.ld2rdf.annotation.exception.ParserInstantiationException;
+import ws.biotea.ld2rdf.annotation.exception.UnsupportedFormatException;
 import ws.biotea.ld2rdf.annotation.parser.AnnotatorParser;
 import ws.biotea.ld2rdf.exception.RDFModelIOException;
 import ws.biotea.ld2rdf.rdf.model.aoextended.AnnotationE;
@@ -74,8 +76,9 @@ public class AllDistributionAndAnnotatorParser implements TopicDistributionAndAn
 	 * @param documentId
 	 * @throws IOException 
 	 * @throws URISyntaxException 
+	 * @throws ArticleParserException 
 	 */
-	public List<AnnotationE> parse(String documentId) throws IOException, URISyntaxException, NoResponseException {
+	public List<AnnotationE> parse(String documentId) throws IOException, URISyntaxException, NoResponseException, ArticleParserException {
 		this.lstAnnotations = parser.parse(documentId);
 		distParser.parse(this.lstAnnotations); 
 		return this.lstAnnotations;
@@ -86,8 +89,9 @@ public class AllDistributionAndAnnotatorParser implements TopicDistributionAndAn
 	 * @param documentId
 	 * @throws IOException 
 	 * @throws URISyntaxException 
+	 * @throws ArticleParserException 
 	 */
-	public List<AnnotationE> parse(File file) throws IOException, NoResponseException, URISyntaxException {
+	public List<AnnotationE> parse(File file) throws IOException, NoResponseException, URISyntaxException, ArticleParserException {
 		this.lstAnnotations = parser.parse(file);
 		distParser.parse(this.lstAnnotations);
 		return this.lstAnnotations;
@@ -103,8 +107,9 @@ public class AllDistributionAndAnnotatorParser implements TopicDistributionAndAn
 	 * @throws OntologyLoadException 
 	 * @throws ClassNotFoundException 
 	 * @throws FileNotFoundException 
+	 * @throws UnsupportedFormatException 
 	 */
-	public List<AnnotationE> serializeToFile(String fullPathName, RDFFormat format, AnnotationDAO dao, ObjectModelDAO<TopicDistribution> daoTopic, boolean empty, boolean blankNode) throws RDFModelIOException, URISyntaxException, FileNotFoundException, ClassNotFoundException, OntologyLoadException {
+	public List<AnnotationE> serializeToFile(String fullPathName, RDFFormat format, AnnotationDAO dao, ObjectModelDAO<TopicDistribution> daoTopic, boolean empty, boolean blankNode) throws RDFModelIOException, URISyntaxException, FileNotFoundException, ClassNotFoundException, OntologyLoadException, UnsupportedFormatException {
 		List<AnnotationE> lst = parser.serializeToFile(fullPathName, format, dao, empty, blankNode);
 		distParser.serializeToFile(fullPathName, format, daoTopic, false, blankNode);
 		return lst;
@@ -117,14 +122,15 @@ public class AllDistributionAndAnnotatorParser implements TopicDistributionAndAn
 	 * @param dao
 	 * @throws RDFModelIOException 
 	 * @throws URISyntaxException 
+	 * @throws UnsupportedFormatException 
 	 */
-	public List<AnnotationE> serializeToModel(Model model, AnnotationDAO dao, ObjectModelDAO<TopicDistribution> daoTopic, boolean blankNode) throws RDFModelIOException, URISyntaxException {
+	public List<AnnotationE> serializeToModel(Model model, AnnotationDAO dao, ObjectModelDAO<TopicDistribution> daoTopic, boolean blankNode) throws RDFModelIOException, URISyntaxException, UnsupportedFormatException {
 		List<AnnotationE> lst = parser.serializeToModel(model, dao, blankNode);
 		distParser.serializeToModel(model, daoTopic, blankNode);
 		return lst;
 	}
 
-	public static void main(String[] args) throws IOException, URISyntaxException, NoResponseException, ClassNotFoundException, OntologyLoadException, RDFModelIOException, ParserInstantiationException {
+	public static void main(String[] args) throws IOException, URISyntaxException, NoResponseException, ClassNotFoundException, OntologyLoadException, RDFModelIOException, ParserInstantiationException, ArticleParserException, UnsupportedFormatException {
 		Object[] parserArgs = {false, true, true, true, true};
 		Object[] modelArgs = {"biolinks"};
 		AllDistributionAndAnnotatorParser parser = new AllDistributionAndAnnotatorParser("CMA", "biolinks", parserArgs, modelArgs);		

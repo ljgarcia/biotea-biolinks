@@ -12,6 +12,7 @@ import java.util.Map;
 import org.apache.jena.riot.RDFFormat;
 import org.apache.log4j.Logger;
 
+import ws.biotea.ld2rdf.annotation.exception.ArticleParserException;
 import ws.biotea.ld2rdf.annotation.exception.NoResponseException;
 import ws.biotea.ld2rdf.annotation.parser.AnnotatorParser;
 import ws.biotea.ld2rdf.annotation.parser.CMAParser;
@@ -21,6 +22,7 @@ import ws.biotea.ld2rdf.rdf.persistence.ao.AnnotationOWLReader;
 import ws.biotea.ld2rdf.rdf.persistence.ao.ConnectionLDModel;
 import ws.biotea.ld2rdf.util.ResourceConfig;
 import ws.biotea.ld2rdf.util.annotation.Annotator;
+import ws.biotea.ld2rdf.util.annotation.ConstantConfig;
 
 import com.hp.hpl.jena.rdf.model.Model;
 
@@ -48,8 +50,8 @@ public class CMADistributionParser implements TopicDistributionParser {
 	 * @param onlyTitleAndAbstract
 	 * @param model
 	 */
-	public CMADistributionParser(boolean fromURL, boolean onlyUMLS, boolean titleTwice, boolean onlyTitleAndAbstract, String model) {		
-		this.annotatorParser = new CMAParser(fromURL, onlyUMLS, titleTwice, onlyTitleAndAbstract, true);
+	public CMADistributionParser(boolean fromURL, boolean onlyUMLS, boolean titleTwice, boolean onlyTitleAndAbstract, String model, ConstantConfig onto) {		
+		this.annotatorParser = new CMAParser(fromURL, onlyUMLS, titleTwice, onlyTitleAndAbstract, true, onto);
 		this.model = model;
 	}
 	
@@ -59,7 +61,7 @@ public class CMADistributionParser implements TopicDistributionParser {
 
 	@Override
 	public TopicDistribution parse(String documentId) throws IOException,
-			URISyntaxException, NoResponseException {
+			URISyntaxException, NoResponseException, ArticleParserException {
 		this.lstAnnotations = this.annotatorParser.parse(documentId);		
 		this.parseDistribution();
 		return this.distribution;
@@ -196,7 +198,7 @@ public class CMADistributionParser implements TopicDistributionParser {
 		return this.distribution;
 	}
 	public static void main(String[] args) throws IOException, URISyntaxException, NoResponseException, ClassNotFoundException, OntologyLoadException, RDFModelIOException {
-		TopicDistributionParser parser = new CMADistributionParser(false, true, true, true, "biolinks");
+		TopicDistributionParser parser = new CMADistributionParser(false, true, true, true, "biolinks", ConstantConfig.AO);
 		parser.parse(new File("C:/Users/Leyla/Desktop/PMID11707154.txt"));
 		ObjectModelDAO<TopicDistribution> dao = new TopicDistributionOWLDAO();
 		ConnectionLDModel conn = new ConnectionLDModel();

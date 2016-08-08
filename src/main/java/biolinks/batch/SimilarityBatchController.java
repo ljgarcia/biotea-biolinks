@@ -22,13 +22,16 @@ import biolinks.persistence.TopicDistributionOWLDAO;
 import com.hp.hpl.jena.rdf.model.Model;
 
 import edu.stanford.smi.protege.exception.OntologyLoadException;
+import ws.biotea.ld2rdf.annotation.exception.ArticleParserException;
 import ws.biotea.ld2rdf.annotation.exception.NoResponseException;
 import ws.biotea.ld2rdf.annotation.exception.ParserInstantiationException;
+import ws.biotea.ld2rdf.annotation.exception.UnsupportedFormatException;
 import ws.biotea.ld2rdf.exception.RDFModelIOException;
 import ws.biotea.ld2rdf.rdf.persistence.ao.AnnotationDAO;
 import ws.biotea.ld2rdf.rdf.persistence.ao.AnnotationOWLDAO;
 import ws.biotea.ld2rdf.rdf.persistence.ao.ConnectionLDModel;
 import ws.biotea.ld2rdf.util.annotation.Annotator;
+import ws.biotea.ld2rdf.util.annotation.ConstantConfig;
 
 public class SimilarityBatchController {
 	private static final Logger LOGGER = Logger.getLogger(SimilarityBatchController.class);
@@ -85,7 +88,7 @@ public class SimilarityBatchController {
 	}
 	
 	public void comparesFromURL(String baseId, String otherId, String outputDir, RDFFormat format, Annotator annotator
-			, boolean onlyTA, String biomodel, List<String> groups) {
+			, boolean onlyTA, String biomodel, List<String> groups) throws ArticleParserException {
 		try {
 			String extension = format == RDFFormat.JSONLD ? JSON_EXTENSION : RDF_EXTENSION;
 			String outName = outputDir + "/" + baseId + "_" + otherId + extension; 
@@ -139,9 +142,9 @@ public class SimilarityBatchController {
     		
     		if (annotator == Annotator.CMA) {
     			if (onlyTA) {
-    				parser = new CMADistributionParser(false, true, true, true, bioModel);
+    				parser = new CMADistributionParser(false, true, true, true, bioModel, ConstantConfig.AO);
     			} else {
-    				parser = new CMADistributionParser(false, true, true, false, bioModel);
+    				parser = new CMADistributionParser(false, true, true, false, bioModel, ConstantConfig.AO);
     			}
 				parser.parse(inFile, format);
 				parser.serializeToModel(model, dao, false);
@@ -161,7 +164,7 @@ public class SimilarityBatchController {
 		}
 	}
 	
-	public void distributesFromURL(String id, String outputDir, RDFFormat format, Annotator annotator, boolean onlyTA, String bioModel) {
+	public void distributesFromURL(String id, String outputDir, RDFFormat format, Annotator annotator, boolean onlyTA, String bioModel) throws ArticleParserException {
 		try {
 			String extension = format == RDFFormat.JSONLD ? JSON_EXTENSION : RDF_EXTENSION;
 			String outName = outputDir + "/" + id + "_distribution" + extension; 
@@ -172,9 +175,9 @@ public class SimilarityBatchController {
     		
     		if (annotator == Annotator.CMA) {
     			if (onlyTA) {
-    				parser = new CMADistributionParser(true, true, true, true, bioModel);
+    				parser = new CMADistributionParser(true, true, true, true, bioModel, ConstantConfig.AO);
     			} else {
-    				parser = new CMADistributionParser(true, true, true, false, bioModel);
+    				parser = new CMADistributionParser(true, true, true, false, bioModel, ConstantConfig.AO);
     			}
 				parser.parse(id);
 				parser.serializeToModel(model, dao, false);
@@ -193,7 +196,7 @@ public class SimilarityBatchController {
 		}
 	}
 
-	public void distributesAndAnnotatesFromFile(File inFile, String outputDir, RDFFormat format, Annotator annotator, boolean onlyTA, String bioModel) {
+	public void distributesAndAnnotatesFromFile(File inFile, String outputDir, RDFFormat format, Annotator annotator, boolean onlyTA, String bioModel) throws ArticleParserException, UnsupportedFormatException {
 		String inPath = inFile.toString();
 		try {
 			String outExtension = format == RDFFormat.JSONLD ? JSON_EXTENSION : RDF_EXTENSION;
@@ -238,7 +241,7 @@ public class SimilarityBatchController {
 		}
 	}
 	
-	public void distributesAndAnnotatesFromURL(String id, String outputDir, RDFFormat format, Annotator annotator, boolean onlyTA, String bioModel) {
+	public void distributesAndAnnotatesFromURL(String id, String outputDir, RDFFormat format, Annotator annotator, boolean onlyTA, String bioModel) throws ArticleParserException, UnsupportedFormatException {
 		try {
 			String extension = format == RDFFormat.JSONLD ? JSON_EXTENSION : RDF_EXTENSION;
 			String outName = outputDir + "/" + id + "_annotation_and_distribution" + extension;

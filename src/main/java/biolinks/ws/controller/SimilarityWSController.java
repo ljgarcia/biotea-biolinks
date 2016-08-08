@@ -26,6 +26,7 @@ import ws.biotea.ld2rdf.annotation.exception.ParameterException;
 import ws.biotea.ld2rdf.exception.RDFModelIOException;
 import ws.biotea.ld2rdf.rdf.persistence.ao.ConnectionLDModel;
 import ws.biotea.ld2rdf.util.annotation.Annotator;
+import ws.biotea.ld2rdf.util.annotation.ConstantConfig;
 import biolinks.model.Biolink;
 import biolinks.model.TopicDistribution;
 import biolinks.parser.CMADistributionParser;
@@ -139,9 +140,9 @@ public class SimilarityWSController {
 	    		if (Annotator.valueOf(annotator) == Annotator.CMA) {
 	    			TopicDistributionParser parser;
 	    			if (db.equals("pubmed")) {
-	    				parser = new CMADistributionParser(true, true, true, true, bioModel);
+	    				parser = new CMADistributionParser(true, true, true, true, bioModel, ConstantConfig.AO);
 	    			} else {
-	    				parser = new CMADistributionParser(true, true, true, false, bioModel);
+	    				parser = new CMADistributionParser(true, true, true, false, bioModel, ConstantConfig.AO);
 	    			}
 					parser.parse(baseId);
 					parser.serializeToModel(model, dao, false);

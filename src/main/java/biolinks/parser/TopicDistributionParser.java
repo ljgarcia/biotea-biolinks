@@ -8,6 +8,7 @@ import java.util.List;
 
 import org.apache.jena.riot.RDFFormat;
 
+import ws.biotea.ld2rdf.annotation.exception.ArticleParserException;
 import ws.biotea.ld2rdf.annotation.exception.NoResponseException;
 import ws.biotea.ld2rdf.exception.RDFModelIOException;
 import ws.biotea.ld2rdf.rdf.model.aoextended.AnnotationE;
@@ -24,8 +25,9 @@ public interface TopicDistributionParser {
 	 * @param documentId
 	 * @throws IOException 
 	 * @throws URISyntaxException 
+	 * @throws ArticleParserException 
 	 */
-	public TopicDistribution parse(String documentId) throws IOException, URISyntaxException, NoResponseException;
+	public TopicDistribution parse(String documentId) throws IOException, URISyntaxException, NoResponseException, ArticleParserException;
 	
 	/**
 	 * Parses a TopicDistribution object response from a file in order to extract its annotations.

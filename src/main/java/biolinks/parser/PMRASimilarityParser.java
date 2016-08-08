@@ -17,6 +17,7 @@ import org.apache.log4j.Logger;
 import com.hp.hpl.jena.rdf.model.Model;
 
 import edu.stanford.smi.protege.exception.OntologyLoadException;
+import ws.biotea.ld2rdf.annotation.exception.ArticleParserException;
 import ws.biotea.ld2rdf.annotation.exception.NoResponseException;
 import ws.biotea.ld2rdf.annotation.parser.AnnotatorParser;
 import ws.biotea.ld2rdf.annotation.parser.CMAParser;
@@ -31,6 +32,7 @@ import biolinks.model.Biolink;
 import biolinks.persistence.ObjectModelDAO;
 import biolinks.util.BiolinksResourceConfig;
 import ws.biotea.ld2rdf.util.annotation.Annotator;
+import ws.biotea.ld2rdf.util.annotation.ConstantConfig;
 
 public class PMRASimilarityParser {
 	private final double PMRA_MIU = 0.013, PMRA_LAMBDA = 0.022;
@@ -75,8 +77,9 @@ public class PMRASimilarityParser {
 	 * @throws URISyntaxException
 	 * @throws IOException
 	 * @throws NoResponseException
+	 * @throws ArticleParserException 
 	 */
-	public Biolink parse(String givenDoc, String analyzedDoc) throws URISyntaxException, IOException, NoResponseException {
+	public Biolink parse(String givenDoc, String analyzedDoc) throws URISyntaxException, IOException, NoResponseException, ArticleParserException {
 		return this.parse(givenDoc, analyzedDoc, null, null);
 		
 	} 
@@ -90,12 +93,13 @@ public class PMRASimilarityParser {
 	 * @throws URISyntaxException 
 	 * @throws NoResponseException 
 	 * @throws IOException 
+	 * @throws ArticleParserException 
 	 */
-	public Biolink parse(String givenDoc, String analyzedDoc, String model, List<String> groups) throws URISyntaxException, IOException, NoResponseException {
+	public Biolink parse(String givenDoc, String analyzedDoc, String model, List<String> groups) throws URISyntaxException, IOException, NoResponseException, ArticleParserException {
 		this.init();
 		if (this.fromURL) {
 			if (this.annotator == Annotator.CMA) {
-				this.annotParser = new CMAParser(this.fromURL, true, true, this.onlyTitleAndAbstract, true);
+				this.annotParser = new CMAParser(this.fromURL, true, true, this.onlyTitleAndAbstract, true, ConstantConfig.AO);
 			} else if (this.annotator == Annotator.NCBO) {
 				//TODO
 			}

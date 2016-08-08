@@ -15,6 +15,8 @@ import org.apache.jena.riot.RDFFormat;
 import org.apache.log4j.Logger;
 
 import biolinks.util.Model;
+import ws.biotea.ld2rdf.annotation.exception.ArticleParserException;
+import ws.biotea.ld2rdf.annotation.exception.UnsupportedFormatException;
 import ws.biotea.ld2rdf.util.annotation.Annotator;
 
 
@@ -288,12 +290,15 @@ public class BatchApplication {
 						this.runTask(new Runnable() {
 							public void run() {
 								SimilarityBatchController controller = new SimilarityBatchController();
-								controller.distributesAndAnnotatesFromFile(inFile, outputDir, format, annotator, onlyTA, model.getName());
+								try {
+									controller.distributesAndAnnotatesFromFile(inFile, outputDir, format, annotator, onlyTA, model.getName());
+								} catch (ArticleParserException | UnsupportedFormatException e) {
+									LOGGER.error(inFile.getName() + " could not be processed " + e);
+								}
 								controller = null;
 							}
 						});
-					}
-						
+					}						
 				} catch (Exception e) {
 					LOGGER.error("Line #" + lineCounter + "(" + line + ") could not be processed. Error was: " + e);
 				} finally {
@@ -337,8 +342,12 @@ public class BatchApplication {
 						this.runTask(new Runnable() {
 			                public void run() {	
 		                		SimilarityBatchController controller = new SimilarityBatchController();
-								controller.comparesFromURL(ids[0], ids[1], outputDir, format, annotator, onlyTA
-										, model.getName(), groups);
+								try {
+									controller.comparesFromURL(ids[0], ids[1], outputDir, format, annotator, onlyTA
+											, model.getName(), groups);
+								} catch (ArticleParserException e) {
+									LOGGER.error(ids[0] + "-" + ids[1] + " could not be processed " + e);
+								}
 								controller = null;		                	
 			                }
 			            });
@@ -347,7 +356,11 @@ public class BatchApplication {
 						this.runTask(new Runnable() {
 							public void run() {								
 								SimilarityBatchController controller = new SimilarityBatchController();
-								controller.distributesFromURL(id, outputDir, format, annotator, onlyTA, model.getName());
+								try {
+									controller.distributesFromURL(id, outputDir, format, annotator, onlyTA, model.getName());
+								} catch (ArticleParserException e) {
+									LOGGER.error(id + " could not be processed " + e);
+								}
 								controller = null;
 							}
 						});
@@ -356,7 +369,11 @@ public class BatchApplication {
 						this.runTask(new Runnable() {
 							public void run() {
 								SimilarityBatchController controller = new SimilarityBatchController();
-								controller.distributesAndAnnotatesFromURL(id, outputDir, format, annotator, onlyTA, model.getName());
+								try {
+									controller.distributesAndAnnotatesFromURL(id, outputDir, format, annotator, onlyTA, model.getName());
+								} catch (ArticleParserException | UnsupportedFormatException e) {
+									LOGGER.error(id + " could not be processed " + e);
+								}
 								controller = null;
 							}
 						});

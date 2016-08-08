@@ -8,7 +8,9 @@ import java.util.List;
 
 import org.apache.jena.riot.RDFFormat;
 
+import ws.biotea.ld2rdf.annotation.exception.ArticleParserException;
 import ws.biotea.ld2rdf.annotation.exception.NoResponseException;
+import ws.biotea.ld2rdf.annotation.exception.UnsupportedFormatException;
 import ws.biotea.ld2rdf.exception.RDFModelIOException;
 import ws.biotea.ld2rdf.rdf.model.aoextended.AnnotationE;
 import ws.biotea.ld2rdf.rdf.persistence.ao.AnnotationDAO;
@@ -25,16 +27,18 @@ public interface TopicDistributionAndAnnotatorParser {
 	 * @param documentId
 	 * @throws IOException 
 	 * @throws URISyntaxException 
+	 * @throws ArticleParserException 
 	 */
-	public List<AnnotationE> parse(String documentId) throws IOException, URISyntaxException, NoResponseException;
+	public List<AnnotationE> parse(String documentId) throws IOException, URISyntaxException, NoResponseException, ArticleParserException;
 	
 	/**
 	 * Parses an annotator parser response from a file in order to extract its annotations.
 	 * @param documentId
 	 * @throws IOException 
 	 * @throws URISyntaxException 
+	 * @throws ArticleParserException 
 	 */
-	public List<AnnotationE> parse(File file) throws IOException, URISyntaxException, NoResponseException;
+	public List<AnnotationE> parse(File file) throws IOException, URISyntaxException, NoResponseException, ArticleParserException;
 	
 	/**
 	 * Serializes annotations and topic distribution to a file.
@@ -46,8 +50,9 @@ public interface TopicDistributionAndAnnotatorParser {
 	 * @param blankNode
 	 * @return
 	 * @throws RDFModelIOException
+	 * @throws UnsupportedFormatException 
 	 */
-	public List<AnnotationE> serializeToFile(String fullPathName, RDFFormat format, AnnotationDAO dao, ObjectModelDAO<TopicDistribution> daoTopic,boolean empty, boolean blankNode) throws RDFModelIOException, URISyntaxException, FileNotFoundException, ClassNotFoundException, OntologyLoadException ;
+	public List<AnnotationE> serializeToFile(String fullPathName, RDFFormat format, AnnotationDAO dao, ObjectModelDAO<TopicDistribution> daoTopic,boolean empty, boolean blankNode) throws RDFModelIOException, URISyntaxException, FileNotFoundException, ClassNotFoundException, OntologyLoadException, UnsupportedFormatException ;
 	
 	/**
 	 * Serializes annotations and topic distribution to a model.
@@ -57,6 +62,7 @@ public interface TopicDistributionAndAnnotatorParser {
 	 * @param blankNode
 	 * @return
 	 * @throws RDFModelIOException
+	 * @throws UnsupportedFormatException 
 	 */
-	public List<AnnotationE> serializeToModel(Model model, AnnotationDAO dao, ObjectModelDAO<TopicDistribution> daoTopic,boolean blankNode) throws RDFModelIOException, URISyntaxException;
+	public List<AnnotationE> serializeToModel(Model model, AnnotationDAO dao, ObjectModelDAO<TopicDistribution> daoTopic,boolean blankNode) throws RDFModelIOException, URISyntaxException, UnsupportedFormatException;
 }
