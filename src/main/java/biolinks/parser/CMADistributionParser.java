@@ -5,7 +5,6 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -36,7 +35,6 @@ import biolinks.util.BiolinksResourceConfig;
 public class CMADistributionParser implements TopicDistributionParser {
 	//lambda entropy classifier	
 	Logger logger = Logger.getLogger(this.getClass());
-	private final double PMRA_MIU = 0.013, PMRA_LAMBDA = 0.022;
 	private List<AnnotationE> lstAnnotations;
 	private TopicDistribution distribution;
 	private AnnotatorParser annotatorParser;
@@ -121,65 +119,55 @@ public class CMADistributionParser implements TopicDistributionParser {
 		Map<String, List<String>> groupsAndTypes = BiolinksResourceConfig.getGroupsAndTypes(this.model);
 		Map<String, Double> lambdas = BiolinksResourceConfig.getLambdaEntropyClassifier(this.model);
 		
-		Map<String, Double> groupEntropy = new HashMap<String, Double>();
-		double totalEntropy = 0;
-		for (String group: groupsAndTypes.keySet()) {
-			double fGroup = fGroup(group, groupsAndTypes.get(group), totalTF);
-			double value = Math.pow(Math.E, lambdas.get(group) * fGroup);
-			//double value = Math.pow(Math.E, 1 * fGroup);
-			totalEntropy += value;
-			groupEntropy.put(group, value);
-		}
+		double totalScore = 0.0;
 		
 		for (String group: groupsAndTypes.keySet()) {
 			Topic topic = new Topic();
 			topic.setTopicLabel(group);
-			double groupEntropyValue = groupEntropy.get(group);
-			topic.setScore(groupEntropyValue / totalEntropy);
-			if (groupEntropyValue != 1.0) {
+			
+	        double fTfIdfGroup = 0;
+
+	        for (AnnotationE annotation: this.lstAnnotations) {
+	        	double frequency = annotation.getFrequency() * annotation.getIDF();
+	            if (belongsToGroup(annotation, group, groupsAndTypes)) {
+	                fTfIdfGroup += frequency;
+	            }
+	        }
+	        
+	        if (fTfIdfGroup != 0) {
+	            double valueTfIdf = lambdas.get(group) * fTfIdfGroup;
+	            totalScore += valueTfIdf;
+	            topic.setScore(valueTfIdf);
+	        } else {
+	        	topic.setScore(0);
+	        }
+	        
+			if (topic.getScore() != 0.0) {
 				this.distribution.getTopics().add(topic);
 			}			
-		}		
+		}
+		
+		for (Topic topic: this.distribution.getTopics()) {
+			topic.setScore(topic.getScore() / totalScore);
+		}
 	}
 	
-	
 	/**
-	 * f(group, doc) = sum <annot in group>( pow(1+pow(miu/lambda, tf(annot)-1)*pow(exp, -(miu-lambda)*tf(annot in group)), -1) * idf(annot) )
+	 * Finds out if an annotation belongs to a semantic group.
+	 * @param annotation
 	 * @param group
-	 * @param types
-	 * @param totalTF
-	 * @return
+	 * @param groupsAndTypes
+	 * @return true if any of the annotation semantic types is a type for the semantic group.
 	 */
-	private double fGroup(String group, List<String> types, int totalTF) {
-		double weight = 0.0;
-		for (AnnotationE annot: this.lstAnnotations) {
-			if (this.belongsToGroup(types, annot)) {
-				weight += Math.pow(
-						1 + (
-								Math.pow(this.PMRA_MIU/this.PMRA_LAMBDA, annot.getFrequency()*annot.getIDF() - 1) *
-								Math.pow(Math.E, -(this.PMRA_MIU - this.PMRA_LAMBDA) * totalTF)
-							)
-						, -1);
-			}
-		}
-		return weight;
-	}
-	
-	/**
-	 * True if annot has any topic with a type belonging to types.
-	 * @param types
-	 * @param annot
-	 * @return
-	 */
-	private boolean belongsToGroup(List<String> types, AnnotationE annot) {
-		for (ws.biotea.ld2rdf.rdf.model.ao.Topic topic: annot.getTopics()) {
-			for (String sty: topic.getUmlsType()) {
-				if (types.contains(sty)) {
-					return true;
-				}
-			}
-		}
-		return false;
+	private boolean belongsToGroup(AnnotationE annotation, String group, Map<String, List<String>> groupsAndTypes) {
+    	for (ws.biotea.ld2rdf.rdf.model.ao.Topic annotTopic: annotation.getTopics()) {
+    		for (String type: annotTopic.getUmlsType()) {
+    			if (groupsAndTypes.get(group).contains(type)) {
+    				return true;
+    			}
+    		}
+    	}
+    	return false;
 	}
 
 	@Override
