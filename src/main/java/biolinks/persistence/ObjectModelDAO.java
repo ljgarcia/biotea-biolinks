@@ -11,7 +11,7 @@ import org.apache.jena.riot.RDFFormat;
 import org.apache.log4j.Logger;
 
 import ws.biotea.ld2rdf.exception.RDFModelIOException;
-import ws.biotea.ld2rdf.rdf.persistence.ao.ConnectionLDModel;
+import ws.biotea.ld2rdf.rdf.persistence.ConnectionLDModel;
 import biolinks.model.Concept;
 
 import com.hp.hpl.jena.rdf.model.Model;

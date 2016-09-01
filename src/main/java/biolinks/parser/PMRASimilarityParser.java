@@ -25,14 +25,13 @@ import ws.biotea.ld2rdf.exception.RDFModelIOException;
 import ws.biotea.ld2rdf.rdf.model.ao.FoafAgent;
 import ws.biotea.ld2rdf.rdf.model.ao.Topic;
 import ws.biotea.ld2rdf.rdf.model.aoextended.AnnotationE;
-import ws.biotea.ld2rdf.rdf.persistence.ao.AnnotationOWLReader;
+import ws.biotea.ld2rdf.rdf.persistence.AnnotationOWLReader;
 import ws.biotea.ld2rdf.util.ResourceConfig;
 import biolinks.model.AnnotatedConcept;
 import biolinks.model.Biolink;
 import biolinks.persistence.ObjectModelDAO;
 import biolinks.util.BiolinksResourceConfig;
 import ws.biotea.ld2rdf.util.annotation.Annotator;
-import ws.biotea.ld2rdf.util.annotation.ConstantConfig;
 
 public class PMRASimilarityParser {
 	private final double PMRA_MIU = 0.013, PMRA_LAMBDA = 0.022;
@@ -99,7 +98,7 @@ public class PMRASimilarityParser {
 		this.init();
 		if (this.fromURL) {
 			if (this.annotator == Annotator.CMA) {
-				this.annotParser = new CMAParser(this.fromURL, true, true, this.onlyTitleAndAbstract, true, ConstantConfig.AO);
+				this.annotParser = new CMAParser(this.fromURL, true, true, this.onlyTitleAndAbstract, true);
 			} else if (this.annotator == Annotator.NCBO) {
 				//TODO
 			}

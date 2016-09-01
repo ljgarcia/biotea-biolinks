@@ -17,8 +17,8 @@ import ws.biotea.ld2rdf.annotation.parser.AnnotatorParser;
 import ws.biotea.ld2rdf.annotation.parser.CMAParser;
 import ws.biotea.ld2rdf.exception.RDFModelIOException;
 import ws.biotea.ld2rdf.rdf.model.aoextended.AnnotationE;
-import ws.biotea.ld2rdf.rdf.persistence.ao.AnnotationOWLReader;
-import ws.biotea.ld2rdf.rdf.persistence.ao.ConnectionLDModel;
+import ws.biotea.ld2rdf.rdf.persistence.AnnotationOWLReader;
+import ws.biotea.ld2rdf.rdf.persistence.ConnectionLDModel;
 import ws.biotea.ld2rdf.util.ResourceConfig;
 import ws.biotea.ld2rdf.util.annotation.Annotator;
 import ws.biotea.ld2rdf.util.annotation.ConstantConfig;
@@ -49,7 +49,7 @@ public class CMADistributionParser implements TopicDistributionParser {
 	 * @param model
 	 */
 	public CMADistributionParser(boolean fromURL, boolean onlyUMLS, boolean titleTwice, boolean onlyTitleAndAbstract, String model, ConstantConfig onto) {		
-		this.annotatorParser = new CMAParser(fromURL, onlyUMLS, titleTwice, onlyTitleAndAbstract, true, onto);
+		this.annotatorParser = new CMAParser(fromURL, onlyUMLS, titleTwice, onlyTitleAndAbstract, true);
 		this.model = model;
 	}
 	

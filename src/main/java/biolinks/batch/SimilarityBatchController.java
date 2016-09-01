@@ -27,9 +27,9 @@ import ws.biotea.ld2rdf.annotation.exception.NoResponseException;
 import ws.biotea.ld2rdf.annotation.exception.ParserInstantiationException;
 import ws.biotea.ld2rdf.annotation.exception.UnsupportedFormatException;
 import ws.biotea.ld2rdf.exception.RDFModelIOException;
-import ws.biotea.ld2rdf.rdf.persistence.ao.AnnotationDAO;
+import ws.biotea.ld2rdf.rdf.persistence.AnnotationDAO;
 import ws.biotea.ld2rdf.rdf.persistence.ao.AnnotationOWLDAO;
-import ws.biotea.ld2rdf.rdf.persistence.ao.ConnectionLDModel;
+import ws.biotea.ld2rdf.rdf.persistence.ConnectionLDModel;
 import ws.biotea.ld2rdf.util.annotation.Annotator;
 import ws.biotea.ld2rdf.util.annotation.ConstantConfig;
 

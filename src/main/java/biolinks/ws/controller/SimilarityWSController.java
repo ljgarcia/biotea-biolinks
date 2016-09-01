@@ -24,7 +24,7 @@ import ws.biotea.ld2rdf.annotation.exception.ErrorResource;
 import ws.biotea.ld2rdf.annotation.exception.NoResponseException;
 import ws.biotea.ld2rdf.annotation.exception.ParameterException;
 import ws.biotea.ld2rdf.exception.RDFModelIOException;
-import ws.biotea.ld2rdf.rdf.persistence.ao.ConnectionLDModel;
+import ws.biotea.ld2rdf.rdf.persistence.ConnectionLDModel;
 import ws.biotea.ld2rdf.util.annotation.Annotator;
 import ws.biotea.ld2rdf.util.annotation.ConstantConfig;
 import biolinks.model.Biolink;
