@@ -641,7 +641,9 @@ var AnnotationViewer = function(opts){
             viewer.data = _.sortBy(viewer.data, function(datum) {
                 return datum.tf * datum.idf;
             });
-            viewer.data = _.rest(viewer.data, viewer.data.length - viewer.options.maxTerms);
+            var fromIndex = viewer.data.length >= viewer.options.maxTerms
+                ? viewer.data.length - viewer.options.maxTerms : 0;
+            viewer.data = _.rest(viewer.data, fromIndex);
         }
 
         var maxSize = _.max(viewer.data, function(d) {
