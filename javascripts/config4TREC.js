@@ -2302,7 +2302,7 @@ var pubmed_articles = [
     {topic: '_146', id: 10559555, title: 'No detected mutations in the genes for the amyloid precursor protein and presenilins 1 and 2 in a swiss early-onset Alzheimers disease family with a dominant mode of inheritance.'},
     {topic: '_146', id: 10573013, title: 'Genetic association of the presenilin-1 regulatory region with early-onset Alzheimers disease in a population-based sample.'},
     {topic: '_146', id: 10574364, title: 'The role of beta-catenin stability in mutant PS1-associated apoptosis.'},
-    {topic: '_146', id: 10581340, title: '[A study on mutation of exon 5 of presenilin-1 in Alzheimers disease].'},
+//    {topic: '_146', id: 10581340, title: '[A study on mutation of exon 5 of presenilin-1 in Alzheimers disease].'},
     {topic: '_146', id: 10581373, title: 'Polymorphisms in the presenilin 1 and presenilin 2 genes and risk for sporadic Alzheimers disease.'},
     {topic: '_146', id: 10582585, title: 'Staurosporine-induced activation of caspase-3 is potentiated by presenilin 1 familial Alzheimers disease mutations in human neuroglioma cells.'},
     {topic: '_146', id: 10587643, title: 'Presenilin-1 mutations downregulate the signalling pathway of the unfolded-protein response.'},
