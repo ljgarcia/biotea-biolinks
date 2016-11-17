@@ -2443,7 +2443,7 @@ var pubmed_articles = [
     {topic: '_146', id: 12390529, title: 'Involvement of Gadd153 in the pathogenic action of presenilin-1 mutations.'},
     {topic: '_146', id: 12391599, title: 'Alzheimers disease with spastic paresis and cotton wool type plaques.'},
     {topic: '_146', id: 12410385, title: 'NACP/alpha-synuclein, NAC, and beta-amyloid pathology of familial Alzheimers disease with the E184D presenilin-1 mutation: a clinicopathological study of two autopsy cases.'},
-    {topic: '_146', id: 12413003, title: 'The 4,752 C/T polymorphism in the presenilin 1 gene increases the risk of Alzheimers disease in apolipoprotein E4 carriers.'},
+//    {topic: '_146', id: 12413003, title: 'The 4,752 C/T polymorphism in the presenilin 1 gene increases the risk of Alzheimers disease in apolipoprotein E4 carriers.'},
     {topic: '_146', id: 12423249, title: 'Failure of the interaction between presenilin 1 and the substrate of gamma-secretase to produce Abeta in insect cells.'},
     {topic: '_146', id: 12428810, title: 'Presenilins and APP in neuritic and synaptic plasticity: implications for the pathogenesis of Alzheimers disease.'},
     {topic: '_146', id: 12429067, title: 'The presenilins.'},
