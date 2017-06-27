@@ -17,9 +17,9 @@ import ws.biotea.ld2rdf.annotation.exception.UnsupportedFormatException;
 import ws.biotea.ld2rdf.annotation.parser.AnnotatorParser;
 import ws.biotea.ld2rdf.exception.RDFModelIOException;
 import ws.biotea.ld2rdf.rdf.model.aoextended.AnnotationE;
-import ws.biotea.ld2rdf.rdf.persistence.AnnotationDAO;
-import ws.biotea.ld2rdf.rdf.persistence.ao.AnnotationOWLDAO;
 import ws.biotea.ld2rdf.rdf.persistence.ConnectionLDModel;
+import ws.biotea.ld2rdf.rdf.persistence.ConstantConfig;
+import ws.biotea.ld2rdf.util.ResourceConfig;
 import ws.biotea.ld2rdf.util.annotation.Annotator;
 import biolinks.model.TopicDistribution;
 import biolinks.persistence.ObjectModelDAO;
@@ -109,8 +109,10 @@ public class AllDistributionAndAnnotatorParser implements TopicDistributionAndAn
 	 * @throws FileNotFoundException 
 	 * @throws UnsupportedFormatException 
 	 */
-	public List<AnnotationE> serializeToFile(String fullPathName, RDFFormat format, AnnotationDAO dao, ObjectModelDAO<TopicDistribution> daoTopic, boolean empty, boolean blankNode) throws RDFModelIOException, URISyntaxException, FileNotFoundException, ClassNotFoundException, OntologyLoadException, UnsupportedFormatException {
-		List<AnnotationE> lst = parser.serializeToFile(fullPathName, format, dao, empty, blankNode);
+	public List<AnnotationE> serializeToFile(String fullPathName, RDFFormat format, ConstantConfig onto, ObjectModelDAO<TopicDistribution> daoTopic, boolean empty, boolean blankNode) throws RDFModelIOException, URISyntaxException, FileNotFoundException, ClassNotFoundException, OntologyLoadException, UnsupportedFormatException {
+		String[] bases = new String[1];
+		bases[0] = ResourceConfig.getBioteaBase(null);
+		List<AnnotationE> lst = parser.serializeToFile(fullPathName, format, bases[0], onto, empty, blankNode);
 		distParser.serializeToFile(fullPathName, format, daoTopic, false, blankNode);
 		return lst;
 	}
@@ -124,8 +126,10 @@ public class AllDistributionAndAnnotatorParser implements TopicDistributionAndAn
 	 * @throws URISyntaxException 
 	 * @throws UnsupportedFormatException 
 	 */
-	public List<AnnotationE> serializeToModel(Model model, AnnotationDAO dao, ObjectModelDAO<TopicDistribution> daoTopic, boolean blankNode) throws RDFModelIOException, URISyntaxException, UnsupportedFormatException {
-		List<AnnotationE> lst = parser.serializeToModel(model, dao, blankNode);
+	public List<AnnotationE> serializeToModel(Model model, ConstantConfig onto, ObjectModelDAO<TopicDistribution> daoTopic, boolean blankNode) throws RDFModelIOException, URISyntaxException, UnsupportedFormatException {
+		String[] bases = new String[1];
+		bases[0] = ResourceConfig.getBioteaBase(null);
+		List<AnnotationE> lst = parser.serializeToModel(model, bases[0], onto, blankNode);
 		distParser.serializeToModel(model, daoTopic, blankNode);
 		return lst;
 	}
@@ -135,11 +139,10 @@ public class AllDistributionAndAnnotatorParser implements TopicDistributionAndAn
 		Object[] modelArgs = {"biolinks"};
 		AllDistributionAndAnnotatorParser parser = new AllDistributionAndAnnotatorParser("CMA", "biolinks", parserArgs, modelArgs);		
 		parser.parse(new File("C:/Users/Leyla/Desktop/PMID11707154.txt"));
-		AnnotationDAO daoAnnot = new AnnotationOWLDAO();
 		ObjectModelDAO<TopicDistribution> dao = new TopicDistributionOWLDAO();
 		ConnectionLDModel conn = new ConnectionLDModel();
     	Model model = conn.openJenaModel();
-		parser.serializeToModel(model, daoAnnot, dao, false);
+		parser.serializeToModel(model, ConstantConfig.AO, dao, false);
 		try {
 			conn.closeAndWriteJenaModel("C:/Users/Leyla/Desktop/PMID11707154_annotAndTopics.rdf", RDFFormat.RDFXML_ABBREV);
 		} catch (Exception e) {

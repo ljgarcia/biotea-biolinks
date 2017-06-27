@@ -26,20 +26,20 @@ public class BiolinksResourceConfig {
 	}
 	
 	private static void initStaticPatterns() {
-		if (ResourceConfig.USE_BIO2RDF) {
+		if (ResourceConfig.getUseBio2RDF(null)) {
 			//annotations
-			BASE_URL_BIOLINK = ResourceConfig.BIOTEA_URL + ResourceConfig.getDatasetPrefix() + "_resource:biolink_";
-			BASE_URL_ANNOTATED_CONCEPT = ResourceConfig.BIOTEA_URL + ResourceConfig.getDatasetPrefix() + "_resource:annotatedConcept";
-			BASE_URL_MODEL = ResourceConfig.BIOTEA_URL + ResourceConfig.getDatasetPrefix() + "_resource:topicModel";
-			BASE_URL_TOPIC = ResourceConfig.BIOTEA_URL + ResourceConfig.getDatasetPrefix() + "_resource:topicTopic";
-			BASE_URL_TOPIC_DISTRIBUTION = ResourceConfig.BIOTEA_URL + ResourceConfig.getDatasetPrefix() + "_resource:topicDistribution";
+			BASE_URL_BIOLINK = ResourceConfig.getBioteaURL(null) + ResourceConfig.getDatasetPrefix() + "_resource:biolink_";
+			BASE_URL_ANNOTATED_CONCEPT = ResourceConfig.getBioteaURL(null) + ResourceConfig.getDatasetPrefix() + "_resource:annotatedConcept";
+			BASE_URL_MODEL = ResourceConfig.getBioteaURL(null) + ResourceConfig.getDatasetPrefix() + "_resource:topicModel";
+			BASE_URL_TOPIC = ResourceConfig.getBioteaURL(null) + ResourceConfig.getDatasetPrefix() + "_resource:topicTopic";
+			BASE_URL_TOPIC_DISTRIBUTION = ResourceConfig.getBioteaURL(null) + ResourceConfig.getDatasetPrefix() + "_resource:topicDistribution";
 		} else {
 			//annotations
-			BASE_URL_BIOLINK = ResourceConfig.BIOTEA_URL + "biolink/" + ResourceConfig.getDatasetPrefix() + "_resource/";
-			BASE_URL_ANNOTATED_CONCEPT = ResourceConfig.BIOTEA_URL + "annotatedConcept/" + ResourceConfig.getDatasetPrefix() + "_resource/";
-			BASE_URL_MODEL = ResourceConfig.BIOTEA_URL + "topicModel/" + ResourceConfig.getDatasetPrefix() + "_resource/";
-			BASE_URL_TOPIC = ResourceConfig.BIOTEA_URL + "topicTopic/" + ResourceConfig.getDatasetPrefix() + "_resource/";
-			BASE_URL_TOPIC_DISTRIBUTION = ResourceConfig.BIOTEA_URL + "topicDistribution/" + ResourceConfig.getDatasetPrefix() + "_resource/";
+			BASE_URL_BIOLINK = ResourceConfig.getBioteaURL(null) + "biolink/" + ResourceConfig.getDatasetPrefix() + "_resource/";
+			BASE_URL_ANNOTATED_CONCEPT = ResourceConfig.getBioteaURL(null) + "annotatedConcept/" + ResourceConfig.getDatasetPrefix() + "_resource/";
+			BASE_URL_MODEL = ResourceConfig.getBioteaURL(null) + "topicModel/" + ResourceConfig.getDatasetPrefix() + "_resource/";
+			BASE_URL_TOPIC = ResourceConfig.getBioteaURL(null) + "topicTopic/" + ResourceConfig.getDatasetPrefix() + "_resource/";
+			BASE_URL_TOPIC_DISTRIBUTION = ResourceConfig.getBioteaURL(null) + "topicDistribution/" + ResourceConfig.getDatasetPrefix() + "_resource/";
 		}
     }
 	

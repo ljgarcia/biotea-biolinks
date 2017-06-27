@@ -13,7 +13,7 @@ import ws.biotea.ld2rdf.annotation.exception.NoResponseException;
 import ws.biotea.ld2rdf.annotation.exception.UnsupportedFormatException;
 import ws.biotea.ld2rdf.exception.RDFModelIOException;
 import ws.biotea.ld2rdf.rdf.model.aoextended.AnnotationE;
-import ws.biotea.ld2rdf.rdf.persistence.AnnotationDAO;
+import ws.biotea.ld2rdf.rdf.persistence.ConstantConfig;
 import biolinks.model.TopicDistribution;
 import biolinks.persistence.ObjectModelDAO;
 
@@ -44,7 +44,7 @@ public interface TopicDistributionAndAnnotatorParser {
 	 * Serializes annotations and topic distribution to a file.
 	 * @param fullPathName
 	 * @param format
-	 * @param dao
+	 * @param onto
 	 * @param daoTopic
 	 * @param empty
 	 * @param blankNode
@@ -52,17 +52,17 @@ public interface TopicDistributionAndAnnotatorParser {
 	 * @throws RDFModelIOException
 	 * @throws UnsupportedFormatException 
 	 */
-	public List<AnnotationE> serializeToFile(String fullPathName, RDFFormat format, AnnotationDAO dao, ObjectModelDAO<TopicDistribution> daoTopic,boolean empty, boolean blankNode) throws RDFModelIOException, URISyntaxException, FileNotFoundException, ClassNotFoundException, OntologyLoadException, UnsupportedFormatException ;
+	public List<AnnotationE> serializeToFile(String fullPathName, RDFFormat format, ConstantConfig onto, ObjectModelDAO<TopicDistribution> daoTopic,boolean empty, boolean blankNode) throws RDFModelIOException, URISyntaxException, FileNotFoundException, ClassNotFoundException, OntologyLoadException, UnsupportedFormatException ;
 	
 	/**
 	 * Serializes annotations and topic distribution to a model.
 	 * @param model
-	 * @param dao
+	 * @param onto
 	 * @param daoTopic
 	 * @param blankNode
 	 * @return
 	 * @throws RDFModelIOException
 	 * @throws UnsupportedFormatException 
 	 */
-	public List<AnnotationE> serializeToModel(Model model, AnnotationDAO dao, ObjectModelDAO<TopicDistribution> daoTopic,boolean blankNode) throws RDFModelIOException, URISyntaxException, UnsupportedFormatException;
+	public List<AnnotationE> serializeToModel(Model model, ConstantConfig onto, ObjectModelDAO<TopicDistribution> daoTopic,boolean blankNode) throws RDFModelIOException, URISyntaxException, UnsupportedFormatException;
 }

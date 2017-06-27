@@ -19,9 +19,9 @@ import ws.biotea.ld2rdf.exception.RDFModelIOException;
 import ws.biotea.ld2rdf.rdf.model.aoextended.AnnotationE;
 import ws.biotea.ld2rdf.rdf.persistence.AnnotationOWLReader;
 import ws.biotea.ld2rdf.rdf.persistence.ConnectionLDModel;
+import ws.biotea.ld2rdf.rdf.persistence.ConstantConfig;
 import ws.biotea.ld2rdf.util.ResourceConfig;
 import ws.biotea.ld2rdf.util.annotation.Annotator;
-import ws.biotea.ld2rdf.util.annotation.ConstantConfig;
 
 import com.hp.hpl.jena.rdf.model.Model;
 
@@ -174,7 +174,7 @@ public class CMADistributionParser implements TopicDistributionParser {
 	public TopicDistribution serializeToFile(String fullPathName,
 			RDFFormat format, ObjectModelDAO<TopicDistribution> dao,
 			boolean empty, boolean blankNode) throws RDFModelIOException, FileNotFoundException, ClassNotFoundException, OntologyLoadException, URISyntaxException {
-		dao.insert(ResourceConfig.BIOTEA_DATASET, BiolinksResourceConfig.BASE_URL_TOPIC_DISTRIBUTION, null, this.distribution, fullPathName, format, empty);
+		dao.insert(ResourceConfig.getBioteaDatasetURL(null, null), BiolinksResourceConfig.BASE_URL_TOPIC_DISTRIBUTION, null, this.distribution, fullPathName, format, empty);
 		return this.distribution;
 	}
 
@@ -182,7 +182,7 @@ public class CMADistributionParser implements TopicDistributionParser {
 	public TopicDistribution serializeToModel(Model model,
 			ObjectModelDAO<TopicDistribution> dao, boolean blankNode)
 			throws RDFModelIOException, URISyntaxException {
-		dao.insert(ResourceConfig.BIOTEA_DATASET, BiolinksResourceConfig.BASE_URL_TOPIC_DISTRIBUTION, null, this.distribution, model);
+		dao.insert(ResourceConfig.getBioteaDatasetURL(null, null), BiolinksResourceConfig.BASE_URL_TOPIC_DISTRIBUTION, null, this.distribution, model);
 		return this.distribution;
 	}
 	public static void main(String[] args) throws IOException, URISyntaxException, NoResponseException, ClassNotFoundException, OntologyLoadException, RDFModelIOException {

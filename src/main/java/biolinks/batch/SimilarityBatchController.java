@@ -27,11 +27,9 @@ import ws.biotea.ld2rdf.annotation.exception.NoResponseException;
 import ws.biotea.ld2rdf.annotation.exception.ParserInstantiationException;
 import ws.biotea.ld2rdf.annotation.exception.UnsupportedFormatException;
 import ws.biotea.ld2rdf.exception.RDFModelIOException;
-import ws.biotea.ld2rdf.rdf.persistence.AnnotationDAO;
-import ws.biotea.ld2rdf.rdf.persistence.ao.AnnotationOWLDAO;
 import ws.biotea.ld2rdf.rdf.persistence.ConnectionLDModel;
+import ws.biotea.ld2rdf.rdf.persistence.ConstantConfig;
 import ws.biotea.ld2rdf.util.annotation.Annotator;
-import ws.biotea.ld2rdf.util.annotation.ConstantConfig;
 
 public class SimilarityBatchController {
 	private static final Logger LOGGER = Logger.getLogger(SimilarityBatchController.class);
@@ -211,7 +209,6 @@ public class SimilarityBatchController {
 			ConnectionLDModel conn = new ConnectionLDModel();
     		Model model = conn.openJenaModel(outName, true, format);
     		ObjectModelDAO<TopicDistribution> dao = new TopicDistributionOWLDAO();
-    		AnnotationDAO daoAnnot = new AnnotationOWLDAO();
     		AllDistributionAndAnnotatorParser parser;
     		
     		Object[] modelArgs = {bioModel};
@@ -224,7 +221,7 @@ public class SimilarityBatchController {
     				parser = new AllDistributionAndAnnotatorParser("CMA", bioModel, parserArgs, modelArgs);
     			}
 				parser.parse(inFile);
-				parser.serializeToModel(model, daoAnnot, dao, false);
+				parser.serializeToModel(model, ConstantConfig.AO, dao, false);
     		} else if (annotator == Annotator.NCBO) {
     			
     		}
@@ -249,7 +246,6 @@ public class SimilarityBatchController {
 			ConnectionLDModel conn = new ConnectionLDModel();
     		Model model = conn.openJenaModel(outName, true, format);
     		ObjectModelDAO<TopicDistribution> dao = new TopicDistributionOWLDAO();
-    		AnnotationDAO daoAnnot = new AnnotationOWLDAO();
     		AllDistributionAndAnnotatorParser parser;
     		
     		Object[] modelArgs = {bioModel};
@@ -262,7 +258,7 @@ public class SimilarityBatchController {
     				parser = new AllDistributionAndAnnotatorParser("CMA", bioModel, parserArgs, modelArgs);
     			}
 				parser.parse(id);
-				parser.serializeToModel(model, daoAnnot, dao, false);
+				parser.serializeToModel(model, ConstantConfig.AO, dao, false);
     		} else if (annotator == Annotator.NCBO) {
     			
     		}

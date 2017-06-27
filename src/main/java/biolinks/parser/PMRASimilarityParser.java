@@ -236,8 +236,8 @@ public class PMRASimilarityParser {
 			this.biolink.setModelURI(new URI(BiolinksResourceConfig.getModelURL(model)));
 		}
 		this.biolink.setAnnotatorURI(new URI(this.annotator.getServiceURI()));
-		this.biolink.setGivenDocURI(new URI(ResourceConfig.getDocRdfUri(givenDocId)));
-		this.biolink.setAnalyzedDocURI(new URI(ResourceConfig.getDocRdfUri(analyzedDocId)));
+		this.biolink.setGivenDocURI(new URI(ResourceConfig.getDocRdfUri(null, givenDocId)));
+		this.biolink.setAnalyzedDocURI(new URI(ResourceConfig.getDocRdfUri(null, analyzedDocId)));
 		
 		if (givenDocId.equals(analyzedDocId)) {
 			this.parsePartialSimilarity(givenDocId, totalTermsGivenDoc, givenDocId, totalTermsGivenDoc, true, true, model, groups);
@@ -421,7 +421,7 @@ public class PMRASimilarityParser {
 	 * @throws FileNotFoundException 
 	 */
 	public URI serializeToFile(String fullPathName, RDFFormat format, ObjectModelDAO<Biolink> dao, boolean empty) throws RDFModelIOException, FileNotFoundException, ClassNotFoundException, OntologyLoadException, URISyntaxException {
-		return dao.insert(ResourceConfig.BIOTEA_DATASET, BiolinksResourceConfig.BASE_URL_BIOLINK, BiolinksResourceConfig.BASE_URL_ANNOTATED_CONCEPT, this.biolink, fullPathName, format, empty);
+		return dao.insert(ResourceConfig.getBioteaDatasetURL(null, null), BiolinksResourceConfig.BASE_URL_BIOLINK, BiolinksResourceConfig.BASE_URL_ANNOTATED_CONCEPT, this.biolink, fullPathName, format, empty);
 	}
 	
 	/**
@@ -433,7 +433,7 @@ public class PMRASimilarityParser {
 	 * @throws URISyntaxException 
 	 */
 	public URI serializeToModel(Model model, ObjectModelDAO<Biolink> dao) throws RDFModelIOException, URISyntaxException {
-		return dao.insert(ResourceConfig.BIOTEA_DATASET, BiolinksResourceConfig.BASE_URL_BIOLINK, BiolinksResourceConfig.BASE_URL_ANNOTATED_CONCEPT, this.biolink, model);
+		return dao.insert(ResourceConfig.getBioteaDatasetURL(null, null), BiolinksResourceConfig.BASE_URL_BIOLINK, BiolinksResourceConfig.BASE_URL_ANNOTATED_CONCEPT, this.biolink, model);
 	}
 
 }
