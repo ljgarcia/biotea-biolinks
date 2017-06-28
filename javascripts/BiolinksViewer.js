@@ -444,7 +444,9 @@ BiolinksParser.prototype.calculateSimilarity = function(queryArticle, allRelated
             }
         });
     }
-
+    //var allRelated = '';
+    //var allSimilarities = '';
+    //var allAltRelated = '';
     _.each(allRelatedArticles, function(article) {
         if (article.id !== queryArticle.id) {
             var similarity = {
@@ -479,9 +481,14 @@ BiolinksParser.prototype.calculateSimilarity = function(queryArticle, allRelated
             }
 
             similarities.push(similarity);
+            //allRelated += similarity.relatedId + '\t';
+            //allAltRelated += similarity.altId + '\t';
+            //allSimilarities += similarity.score + '\t';
         }
     });
-
+    //console.log(allRelated);
+    //console.log(allAltRelated);
+    //console.log(allSimilarities);
     return similarities;
 };
 
