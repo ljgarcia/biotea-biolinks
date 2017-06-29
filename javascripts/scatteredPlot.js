@@ -16,7 +16,7 @@ var selectAndLaunch = function(selectedArticleIndex, selectedArticle, selectedGr
     var articleTopic = _.find(pubmed_trecTopics, function(topic) {
         return queryArticle.topic === topic.id;
     });
-    selectedArticle.text('Topic ' + articleTopic.text + ' (' + queryArticle.topic + ') '
+    selectedArticle.html('Topic: ' + articleTopic.text + ' (' + queryArticle.topic + ')<br/>'
         + queryArticle.title + ' (' + queryArticle.id + ')');
 
     var selectedGroup = selectedGroupValue === 'None' ? [] : [selectedGroupValue];
@@ -84,6 +84,8 @@ var loadAnnotations = function(articleType, queryArticleId, allLoaders) {
     var queryArticle = {}, allRelatedArticles = [];
     var loaderPMC, loaderPubMed;
     _.each(allArticles, function(article) {
+        article.display = article.title;
+
         var articleAnnotations;
         if (articleType === 'pmc') {
             loaderPMC = parser.loadAnnotations('./pmc/', article.id);
@@ -106,39 +108,87 @@ var loadAnnotations = function(articleType, queryArticleId, allLoaders) {
 };
 
 //adapted from http://bl.ocks.org/weiglemc/6185069
-var scatteredPlot = function(queryArticleId, includedGroups) {
-    d3.select("body").select("svg").remove();
+var scatteredPlot = function(queryArticleId, group) {
+    d3.select("#biolinks").selectAll('*').remove();
     var allLoaders = [];
     loadAnnotations('pmc', queryArticleId, allLoaders);
     loadAnnotations('pubmed', queryArticleId, allLoaders);
 
     jQuery.when.apply(null, allLoaders)
         .then(function() {
-            console.log('all data ready');
-            console.log(allArticles);
+            //var similaritiesFT = prepareData(articleTopics, annotationsFT.queryArticle, annotationsFT.allRelatedArticles,
+              //  includedGroups);
+            var queryArticle;
+            _.each(allArticles, function(article) {
+                article.annotations = article.annotationsFT;
+                if (article.id === queryArticleId) {
+                    queryArticle = article;
+                }
+            });
+            var similaritiesFT = parser.calculateSimilarity(queryArticle, allArticles, group);
+
+            _.each(allArticles, function(article) {
+                article.annotations = article.annotationsTA;
+            });
+            var similaritiesTA = parser.calculateSimilarity(queryArticle, allArticles, group);
+
+            _.each(similaritiesFT, function (ft) {
+                var simTA = _.find(similaritiesTA, function (ta) {
+                    return (ft.queryId === ta.queryId) && (ft.relatedId === ta.relatedId);
+                });
+                ft.fullText = +ft.score;
+                ft.titleAbstract = +simTA.score;
+            });
+
+            similaritiesFT.push({
+                altId: queryArticle.altId,
+                display: queryArticle.title,
+                fullText: 1,
+                queryId: queryArticle.id,
+                relatedId: queryArticle.id,
+                titleAbstract: 1,
+                topic: queryArticle.topic
+            });
+
+            _.each(similaritiesFT, function(similarity) {
+                var article = _.find(allArticles, function(art) {
+                    return art.id === similarity.relatedId;
+                });
+                similarity.topic = article.topic;
+            });
+
+            var similarities = _.sortBy(similaritiesFT, function(similarity) {
+                return similarity.topic + ' ' + similarity.relatedId;
+            });
+
+            preparePlot(similarities);
         }
     );
-/*    var similaritiesFT = prepareData(articleTopics, annotationsFT.queryArticle, annotationsFT.allRelatedArticles,
-        includedGroups);
+};
 
-    var similaritiesTA = prepareData(articleTopics, annotationsTA.queryArticle, annotationsTA.allRelatedArticles,
-        includedGroups);
-
-    _.each(similaritiesFT, function (ft) {
-        var simTA = _.find(similaritiesTA, function (ta) {
-            return (ft.queryId === ta.queryId) && (ft.relatedId === ta.relatedId);
-        });
-        ft.fulText = +ft.score;
-        ft.titleAbstract = +simTA.score;
-    });
-
-    var similarities = _.sortBy(similaritiesFT, function(similarity) {
-        return similarity.topic + ' ' + similarity.relatedId;
-    });
+var preparePlot = function(similarities) {
 //margins
-    var margin = {top: 20, right: 20, bottom: 30, left: 40},
-        width = 960 - margin.left - margin.right,
+    var margin = {top: 40, right: 40, bottom: 40, left: 40},
+        width = 500 - margin.left - margin.right,
         height = 500 - margin.top - margin.bottom;
+
+// add the graph canvas to the body of the webpage
+    var svg = d3.select("#biolinks").append("svg")
+        .style("background", "white")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+        .append("g")
+        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+    loadScatteredData(svg, similarities, height, width);
+}
+
+var loadScatteredData = function (svg, similarities, height, width) {
+console.log(similarities);
+// add the tooltip area to the webpage
+    var tooltip = d3.select("#biolinks").append("div")
+        .attr("class", "tooltip")
+        .style("opacity", 0);
 
 // setup x
     var xValue = function(d) { return d.fullText;}, // data -> value
@@ -156,23 +206,6 @@ var scatteredPlot = function(queryArticleId, includedGroups) {
     var cValue = function(d) { return d.topic;},
         color = d3.scale.category20();
 
-// add the graph canvas to the body of the webpage
-    var svg = d3.select("body").append("svg")
-        .attr("width", width + margin.left + margin.right)
-        .attr("height", height + margin.top + margin.bottom)
-        .append("g")
-        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-
-// add the tooltip area to the webpage
-    var tooltip = d3.select("body").append("div")
-        .attr("class", "tooltip")
-        .style("opacity", 0);
-
-    loadScatteredData(svg, similarities);
-};
-
-
-var loadScatteredData = function (svg, similarities) {
     xScale.domain([0, 1]);
     yScale.domain([0, 1]);
 
@@ -212,9 +245,10 @@ var loadScatteredData = function (svg, similarities) {
         .on("mouseover", function(d) {
             tooltip.transition()
                 .duration(200)
-                .style("opacity", .9);
-            tooltip.html(d.topic + ": " + d.relatedId + "<br/> (" + xValue(d)
-                + ", " + yValue(d) + ")")
+                .style("opacity", 1);
+            tooltip.html(d.queryId + " vs. " + d.relatedId +
+                "<br/>full-text: " + Number(xValue(d).toFixed(5)) +
+                "<br/> title-abstract: " + Number(yValue(d).toFixed(5)))
                 .style("left", (d3.event.pageX + 5) + "px")
                 .style("top", (d3.event.pageY - 28) + "px");
         })
@@ -222,5 +256,5 @@ var loadScatteredData = function (svg, similarities) {
             tooltip.transition()
                 .duration(500)
                 .style("opacity", 0);
-        });*/
+        });
 };
