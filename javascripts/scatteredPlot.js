@@ -116,8 +116,6 @@ var scatteredPlot = function(queryArticleId, group) {
 
     jQuery.when.apply(null, allLoaders)
         .then(function() {
-            //var similaritiesFT = prepareData(articleTopics, annotationsFT.queryArticle, annotationsFT.allRelatedArticles,
-              //  includedGroups);
             var queryArticle;
             _.each(allArticles, function(article) {
                 article.annotations = article.annotationsFT;
@@ -184,7 +182,7 @@ var preparePlot = function(similarities) {
 }
 
 var loadScatteredData = function (svg, similarities, height, width) {
-console.log(similarities);
+//console.log(similarities);
 // add the tooltip area to the webpage
     var tooltip = d3.select("#biolinks").append("div")
         .attr("class", "tooltip")
