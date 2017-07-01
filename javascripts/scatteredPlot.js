@@ -23,6 +23,23 @@ var selectAndLaunch = function(selectedArticleIndex, selectedArticle, selectedGr
     scatteredPlot(queryArticle.id, selectedGroup);
 };
 
+var printProfiles = function() {
+    _.each(pubmed_articles, function(article) {
+        if (article.topic !== '_000') {
+            var loaderPubMed = parser.loadAnnotations('./pubmed/', article.id);
+            loaderPubMed.done(function(loadedData) {
+                var str = article.id + '\t0\t';
+                _.each(loadedData.data, function(annot) {
+                    str += annot.cui + '\t' + annot.tf + '\t' + annot.idf + '\t'
+                });
+                console.log(str);
+            }).fail( function(e) {
+                console.log(article.id, e);
+            });
+        }
+    });
+};
+
 var start = function () {
     var selectedArticle = d3.select('#divSelectedArticle');
 
