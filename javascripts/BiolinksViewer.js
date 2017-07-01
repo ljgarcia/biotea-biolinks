@@ -793,8 +793,11 @@ var callForce = function(viewer, graph) {
 
     graph.node.call(viewer.force.drag);
 
-    viewer.force.on("tick", function() {
-        graph.link.attr("x1", function(d) { return d.source.x; })
+    viewer.force.on("tick", function(e) {
+        var k = 6 * e.alpha;
+
+        graph.link.each(function(d) { d.source.x -= k, d.target.x += k; })
+            .attr("x1", function(d) { return d.source.x; })
             .attr("y1", function(d) { return d.source.y; })
             .attr("x2", function(d) { return d.target.x; })
             .attr("y2", function(d) { return d.target.y; });
@@ -931,7 +934,12 @@ var createForceGraph = function(viewer) {
     callForce(viewer, graph);
 };
 
-SimilarityViewer.prototype.render = function() {
+//<TO COPY>
+SimilarityViewer.prototype.addData = function(data) {
+    this.render(data);
+};
+
+SimilarityViewer.prototype.render = function(additionalData) {
     var viewer = this;
 
     viewer.stopForce();
@@ -950,8 +958,12 @@ SimilarityViewer.prototype.render = function() {
                 createForceGraph(viewer);
             }
         );
-    } else {
-        viewer.loadData(viewer.options.data);
+    } else {//<TO COPY>
+        if (additionalData) {
+            viewer.data.relations = viewer.data.relations.concat(additionalData);
+        } else {
+            viewer.loadData(viewer.options.data);
+        }
         createForceGraph(viewer);
     }
 };
@@ -22907,7 +22919,8 @@ var initDistribution = function(viewer) {
                 updateAnnotations(viewer, viewer.annotationViewerReference, 'biolinks_annotation_ref_viewer',
                     viewer.selectedReferenceArticle);
             }
-
+            //<TO COPY>
+            viewer.path = [viewer.selectedReferenceArticle.id];
         }
     });
 };
@@ -22968,6 +22981,27 @@ var initSimilarityViewer = function(viewer) {
                 d3.selectAll('.biolinks_annotation_comp_viewer').selectAll('*').remove();
                 d3.selectAll('.biolinks_annotation_comp_viewer').html('');
                 viewer.annotationComparedTable.style('display', 'none');
+            }
+//<TO COPY>
+            if ((viewer.allDistData.length - viewer.path.length) > 2) {
+                viewer.path.push(obj.datum.relatedId);
+                var queryArticle = {};
+                var relatedIds = [];
+                relatedIds = _.filter(viewer.annotatedArticles, function(annotatedArticle) {
+                    if (annotatedArticle.id === obj.datum.relatedId) {
+                        queryArticle = annotatedArticle;
+                        /*var dist = _.find(viewer.allDistData, function(distData) {
+                            return distData.id === viewer.selectedReferenceArticle.id;
+                        });
+                        queryArticle.distribution = dist ? dist.data : [];*/
+                    }
+                    return _.contains(viewer.topicArticleIds, annotatedArticle.id) &&
+                            !_.contains(viewer.path, annotatedArticle.id);
+                });
+                console.log(queryArticle, relatedIds, viewer.groupFilter);
+                var data = viewer.parser.calculateSimilarity(queryArticle, relatedIds, viewer.groupFilter);
+                console.log(data);
+                viewer.similarityViewer.viewer.addData(data);
             }
         }
     });
@@ -23140,6 +23174,7 @@ BiolinksViewer.prototype.updateDistribution = function() {
 var updateSimilarity = function(viewer) {
     var queryArticle = {};
     var relatedIds = [];
+
     relatedIds = _.filter(viewer.annotatedArticles, function(annotatedArticle) {
         if (annotatedArticle.id === viewer.selectedReferenceArticle.id) {
             queryArticle = annotatedArticle;
