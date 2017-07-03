@@ -21300,9 +21300,10 @@ var calculateTotalTFIDF = function(article, groupArray) {
 };
 
 var probAnnotation = function(parser, tf, totalTF) {
-    return Math.pow(1 + (
-        Math.pow(parser.model.pmra.miu / parser.model.pmra.lambda, tf - 1) *
-        Math.pow(Math.E, -(parser.model.pmra.miu - parser.model.pmra.lambda) * totalTF)
+    return Math.pow(
+        1 + (
+            Math.pow(parser.model.pmra.miu / parser.model.pmra.lambda, tf - 1) *
+            Math.pow(Math.E, -(parser.model.pmra.miu - parser.model.pmra.lambda) * totalTF)
     ), -1);
 };
 
@@ -21404,6 +21405,9 @@ var calculatePartialSimilarity = function(parser, queryArticle, frequencyQuery, 
                     terms.push(annotation.id);
                     numerator += probAnnotation(parser, annotation.tf * annotation.idf, frequencyQuery) *
                         probAnnotation(parser, comparedAnnot.tf * annotation.idf, frequencyCompared) * annotation.idf;
+                } else {
+                    numerator += probAnnotation(parser, annotation.tf * annotation.idf, frequencyQuery) *
+                         probAnnotation(parser, 0, frequencyCompared) * annotation.idf;
                 }
             }
         }
