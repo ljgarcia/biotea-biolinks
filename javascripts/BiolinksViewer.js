@@ -405,16 +405,19 @@ var calculatePartialSimilarity = function(parser, queryArticle, frequencyQuery, 
     _.each(queryArticle.annotations, function(annotation) {
         if ((groupArray === undefined) || _.contains(groupArray, annotation.group)) {
             if (queryArticle.id === comparedArticle.id) {
-                numerator += Math.pow(probAnnotation(parser, annotation.tf * annotation.idf, frequencyQuery), 2) *
+                numerator += Math.pow(probAnnotation(parser, annotation.tf, frequencyQuery), 2) *
                     annotation.idf;
             } else {
                 var comparedAnnot = _.find(comparedArticle.annotations, function(annot) {
                     return annotation.cui === annot.cui;
                 });
                 if (comparedAnnot) {
-                    terms.push(annotation.id);
-                    numerator += probAnnotation(parser, annotation.tf * annotation.idf, frequencyQuery) *
-                        probAnnotation(parser, comparedAnnot.tf * annotation.idf, frequencyCompared) * annotation.idf;
+                    terms.push(annotation.cui);
+                    numerator += probAnnotation(parser, annotation.tf, frequencyQuery) *
+                        probAnnotation(parser, comparedAnnot.tf, frequencyCompared) * annotation.idf;
+                } else {
+                    numerator += probAnnotation(parser, annotation.tf, frequencyQuery) *
+                        probAnnotation(parser, 0, frequencyCompared) * annotation.idf;
                 }
             }
         }
@@ -855,6 +858,8 @@ SimilarityViewer.prototype.display = function() {
         score: 1,
         terms: []
     }].concat(viewer.data.relations);
+    console.log(viewer.nodes);
+    console.log(viewer.data.links);
 
     var radius = d3.scale.pow().exponent(1).domain([0, 1]).range([5, 15]);
 
@@ -960,7 +965,9 @@ SimilarityViewer.prototype.render = function(additionalData) {
         );
     } else {//<TO COPY>
         if (additionalData) {
-            viewer.data.relations = viewer.data.relations.concat(additionalData);
+        console.log('addData', additionalData);
+        console.log('addData', this.data.relations);
+            //this.data.relations = this.data.relations.concat(data);
         } else {
             viewer.loadData(viewer.options.data);
         }
