@@ -131,7 +131,7 @@ var _ = require('underscore');
 var d3 = require('d3');
 var _ = require('underscore');
 
-var BiolinksModel = function() {
+var BiolinksModel = function(externalModel) {
     var model = this;
     model.pmra = {
         miu: 0.013,
@@ -140,71 +140,75 @@ var BiolinksModel = function() {
     model.color = d3.scale.category20();
     model.groups = [];
 
-    model.model =  {
-        'ACTI': {
-            desc: 'Activities & Behaviors', lambda: 0.171066997,
-            types: ['T052', 'T053', 'T056', 'T051', 'T064', 'T055', 'T066', 'T057', 'T054']},
-        'ANAT': {
-            desc: 'Anatomy', lambda: 0.590092187,
-            types: ['T017', 'T029', 'T023', 'T030', 'T031', 'T022', 'T025', 'T026', 'T018', 'T021', 'T024']},
-        'CHEM': {
-            desc: 'Chemical entities', lambda: 0.338788742,
-            types: ['T123', 'T122', 'T118', 'T103', 'T120', 'T104', 'T111', 'T196', 'T131', 'T125', 'T129', 'T130',
-                'T197', 'T119', 'T124', 'T109', 'T115', 'T110', 'T127']},
-        'CONC': {
-            desc: 'Concepts & Ideas', lambda: 1.186964865,
-            types: ['T185', 'T077', 'T169', 'T102', 'T078', 'T170', 'T171', 'T080', 'T081', 'T089',
-            'T082', 'T079']},
-        'DEVI': {
-            desc: 'Devices', lambda: 0.08770559,
-            types: ['T203', 'T074', 'T075']},
-        'DISO': {
-            desc: 'Disorders', lambda: 0.763191846,
-            types: ['T020', 'T190', 'T049', 'T019', 'T047', 'T050', 'T037', 'T048', 'T191', 'T046']},
-        'DRUG': {
-            desc: 'Drugs', lambda: 0.11454699,
-            types: ['T195', 'T200', 'T121']},
-        'GENE': {
-            desc: 'Genes & Molecular Sequences', lambda: 0.750131316,
-            types: ['T087', 'T088', 'T028', 'T085', 'T086']},
-        'GEOG': {
-            desc: 'Geographic Areas', lambda: 0.030377458,
-            types: ['T083']},
-        'GNPT': {
-            desc: 'DNA & Protein molecules', lambda: 1.357868307,
-            types: ['T116', 'T126', 'T114', 'T192']},
-        'OBJC': {
-            desc: 'Objects', lambda: 0.100822984,
-            types: ['T071', 'T168', 'T073', 'T072', 'T167']},
-        'OBSV': {
-            desc: 'Physiology attributes & processes', lambda: 0.188466395,
-            types: ['T201', 'T041', 'T032']},
-        'OCCU': {
-            desc: 'Occupations', lambda: 0.055810256,
-            types: ['T091', 'T090']},
-        'ORGA': {
-            desc: 'Organizations', lambda: 0.014112602,
-            types: ['T093', 'T092', 'T094', 'T095']},
-        'PEOP': {
-            desc: 'People/Population groups', lambda: 0.14447583,
-            types: ['T100', 'T099', 'T096', 'T101', 'T098', 'T097']},
-        'PHEN': {
-            desc: 'Phenomena', lambda: 0.15883406,
-            types: ['T038', 'T069', 'T068', 'T034', 'T070', 'T067']},
-        'PHYS': {
-            desc: 'Physiological functions', lambda: 0.663635755,
-            types: ['T043', 'T045', 'T044', 'T040', 'T042', 'T039']},
-        'PROC': {
-            desc: 'Procedures', lambda: 0.542553087,
-            types: ['T060', 'T065', 'T058', 'T059', 'T063', 'T062', 'T061']},
-        'SYMP': {
-            desc: 'Disorder symptoms', lambda: 0.352374159,
-            types: ['T033', 'T184']},
-        'TAXA': {
-            desc: 'Taxonomic terms', lambda: 0.3171206,
-            types: ['T011', 'T008', 'T194', 'T007', 'T012', 'T204', 'T013', 'T004', 'T016', 'T015', 'T001', 'T002',
-            'T014', 'T010', 'T005']}
-    };
+    if (externalModel) {
+        model.model = externalModel;
+    } else {
+        model.model =  {
+            'ACTI': {
+                desc: 'Activities & Behaviors', lambda: 0.171066997,
+                types: ['T052', 'T053', 'T056', 'T051', 'T064', 'T055', 'T066', 'T057', 'T054']},
+            'ANAT': {
+                desc: 'Anatomy', lambda: 0.590092187,
+                types: ['T017', 'T029', 'T023', 'T030', 'T031', 'T022', 'T025', 'T026', 'T018', 'T021', 'T024']},
+            'CHEM': {
+                desc: 'Chemical entities', lambda: 0.338788742,
+                types: ['T123', 'T122', 'T118', 'T103', 'T120', 'T104', 'T111', 'T196', 'T131', 'T125', 'T129', 'T130',
+                    'T197', 'T119', 'T124', 'T109', 'T115', 'T110', 'T127']},
+            'CONC': {
+                desc: 'Concepts & Ideas', lambda: 1.186964865,
+                types: ['T185', 'T077', 'T169', 'T102', 'T078', 'T170', 'T171', 'T080', 'T081', 'T089',
+                'T082', 'T079']},
+            'DEVI': {
+                desc: 'Devices', lambda: 0.08770559,
+                types: ['T203', 'T074', 'T075']},
+            'DISO': {
+                desc: 'Disorders', lambda: 0.763191846,
+                types: ['T020', 'T190', 'T049', 'T019', 'T047', 'T050', 'T037', 'T048', 'T191', 'T046']},
+            'DRUG': {
+                desc: 'Drugs', lambda: 0.11454699,
+                types: ['T195', 'T200', 'T121']},
+            'GENE': {
+                desc: 'Genes & Molecular Sequences', lambda: 0.750131316,
+                types: ['T087', 'T088', 'T028', 'T085', 'T086']},
+            'GEOG': {
+                desc: 'Geographic Areas', lambda: 0.030377458,
+                types: ['T083']},
+            'GNPT': {
+                desc: 'DNA & Protein molecules', lambda: 1.357868307,
+                types: ['T116', 'T126', 'T114', 'T192']},
+            'OBJC': {
+                desc: 'Objects', lambda: 0.100822984,
+                types: ['T071', 'T168', 'T073', 'T072', 'T167']},
+            'OBSV': {
+                desc: 'Physiology attributes & processes', lambda: 0.188466395,
+                types: ['T201', 'T041', 'T032']},
+            'OCCU': {
+                desc: 'Occupations', lambda: 0.055810256,
+                types: ['T091', 'T090']},
+            'ORGA': {
+                desc: 'Organizations', lambda: 0.014112602,
+                types: ['T093', 'T092', 'T094', 'T095']},
+            'PEOP': {
+                desc: 'People/Population groups', lambda: 0.14447583,
+                types: ['T100', 'T099', 'T096', 'T101', 'T098', 'T097']},
+            'PHEN': {
+                desc: 'Phenomena', lambda: 0.15883406,
+                types: ['T038', 'T069', 'T068', 'T034', 'T070', 'T067']},
+            'PHYS': {
+                desc: 'Physiological functions', lambda: 0.663635755,
+                types: ['T043', 'T045', 'T044', 'T040', 'T042', 'T039']},
+            'PROC': {
+                desc: 'Procedures', lambda: 0.542553087,
+                types: ['T060', 'T065', 'T058', 'T059', 'T063', 'T062', 'T061']},
+            'SYMP': {
+                desc: 'Disorder symptoms', lambda: 0.352374159,
+                types: ['T033', 'T184']},
+            'TAXA': {
+                desc: 'Taxonomic terms', lambda: 0.3171206,
+                types: ['T011', 'T008', 'T194', 'T007', 'T012', 'T204', 'T013', 'T004', 'T016', 'T015', 'T001', 'T002',
+                'T014', 'T010', 'T005']}
+        };
+    }
 
     _.each(_.keys(model.model), function(key, index) {
         model.model[key].color = model.color(index);
@@ -253,9 +257,13 @@ var SimilarityLoader = require('./SimilarityLoader');
 var EventController = require('./EventController');
 var _ = require('underscore');
 
-var BiolinksParser = function(){
+var BiolinksParser = function(externalModel){
     var parser = this;
-    parser.model = new BiolinksModel();
+    if (externalModel) {
+        parser.model = new BiolinksModel(externalModel);
+    } else {
+        parser.model = new BiolinksModel();
+    }
     parser.dispatcher = new EventController().getDispatcher();
     parser.annotationLoader = new AnnotationLoader(parser.model, parser.dispatcher);
     parser.distributionLoader = new DistributionLoader(parser.dispatcher, parser.model.getGroups());
@@ -821,7 +829,11 @@ var callForce = function(viewer, graph) {
 
 var SimilarityViewer = function(opts){
     var viewer = this;
-    viewer.parser = new BiolinksParser();
+    if (opts.model) {
+        viewer.parser = new BiolinksParser(opts.model);
+    } else {
+        viewer.parser = new BiolinksParser();
+    }
     viewer.dispatcher = viewer.parser.getDispatcher();
     viewer.init(opts);
 };
@@ -939,12 +951,7 @@ var createForceGraph = function(viewer) {
     callForce(viewer, graph);
 };
 
-//<TO COPY>
-SimilarityViewer.prototype.addData = function(data) {
-    this.render(data);
-};
-
-SimilarityViewer.prototype.render = function(additionalData) {
+SimilarityViewer.prototype.render = function() {
     var viewer = this;
 
     viewer.stopForce();
@@ -963,14 +970,8 @@ SimilarityViewer.prototype.render = function(additionalData) {
                 createForceGraph(viewer);
             }
         );
-    } else {//<TO COPY>
-        if (additionalData) {
-        console.log('addData', additionalData);
-        console.log('addData', this.data.relations);
-            //this.data.relations = this.data.relations.concat(data);
-        } else {
-            viewer.loadData(viewer.options.data);
-        }
+    } else {
+        viewer.loadData(viewer.options.data);
         createForceGraph(viewer);
     }
 };
@@ -1257,7 +1258,11 @@ var cleanView = function(viewer) {
 
 var TopicDistributionViewer = function(opts){
     var viewer = this;
-    viewer.parser = new BiolinksParser();
+    if (opts.model) {
+        viewer.parser = new BiolinksParser(opts.model);
+    } else {
+        viewer.parser = new BiolinksParser();
+    }
     viewer.data = [];
     viewer.options = _.extend({}, defaultOpts, opts);
     viewer.topics = _.keys(viewer.parser.getModel().model);
@@ -22780,7 +22785,11 @@ var defaultOpts = {
 var BiolinksViewer = function(opts){
     var viewer = this;
     viewer.options = _.extend({}, defaultOpts, opts);
-    viewer.parser = new BiolinksParser();
+    if (opts.model) {
+        viewer.parser = new BiolinksParser(opts.model);
+    } else {
+        viewer.parser = new BiolinksParser();
+    }
     viewer.groupFilter = _.keys(viewer.parser.getModel().model);
     init(viewer);
 };
@@ -22890,7 +22899,8 @@ var initDistribution = function(viewer) {
         el: '#' + distDivId,
         width: viewer.options.width,
         prefixId: viewer.selectedContent.prefix,
-        alternativePrefixId: viewer.selectedContent.altPrefix
+        alternativePrefixId: viewer.selectedContent.altPrefix,
+        model: viewer.parser.getModel().model
     });
 
     viewer.topicDistribution.getDispatcher().on('selected', function(obj) {
@@ -22926,8 +22936,8 @@ var initDistribution = function(viewer) {
                 updateAnnotations(viewer, viewer.annotationViewerReference, 'biolinks_annotation_ref_viewer',
                     viewer.selectedReferenceArticle);
             }
-            //<TO COPY>
-            viewer.path = [viewer.selectedReferenceArticle.id];
+            //To see
+            //viewer.path = [viewer.selectedReferenceArticle.id];
         }
     });
 };
@@ -22958,7 +22968,8 @@ var initSimilarityViewer = function(viewer) {
         el: viewer.similarityViewer.id,
         width: viewer.options.width,
         height: viewer.options.similarityHeight,
-        useAlternativeIds: false
+        useAlternativeIds: false,
+        model: viewer.parser.getModel().model
     });
 
     viewer.similarityViewer.viewer.getDispatcher().on('selected', function(obj) {
@@ -22989,7 +23000,8 @@ var initSimilarityViewer = function(viewer) {
                 d3.selectAll('.biolinks_annotation_comp_viewer').html('');
                 viewer.annotationComparedTable.style('display', 'none');
             }
-//<TO COPY>
+            //To see
+            /*
             if ((viewer.allDistData.length - viewer.path.length) > 2) {
                 viewer.path.push(obj.datum.relatedId);
                 var queryArticle = {};
@@ -22997,10 +23009,10 @@ var initSimilarityViewer = function(viewer) {
                 relatedIds = _.filter(viewer.annotatedArticles, function(annotatedArticle) {
                     if (annotatedArticle.id === obj.datum.relatedId) {
                         queryArticle = annotatedArticle;
-                        /*var dist = _.find(viewer.allDistData, function(distData) {
+                        var dist = _.find(viewer.allDistData, function(distData) {
                             return distData.id === viewer.selectedReferenceArticle.id;
                         });
-                        queryArticle.distribution = dist ? dist.data : [];*/
+                        queryArticle.distribution = dist ? dist.data : [];
                     }
                     return _.contains(viewer.topicArticleIds, annotatedArticle.id) &&
                             !_.contains(viewer.path, annotatedArticle.id);
@@ -23010,6 +23022,7 @@ var initSimilarityViewer = function(viewer) {
                 console.log(data);
                 viewer.similarityViewer.viewer.addData(data);
             }
+            */
         }
     });
 };
