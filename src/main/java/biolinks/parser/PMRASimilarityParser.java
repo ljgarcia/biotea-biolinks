@@ -286,11 +286,11 @@ public class PMRASimilarityParser {
 								* probDocGivenTerm(analyzedAnnot.getFrequency() * givenAnnot.getIDF(), totalTermsAnalyzedDoc) 
 								* givenAnnot.getIDF();
 						add = true;				
-					} /*else {
+					} else {
 						numerator += probDocGivenTerm(givenAnnot.getFrequency() * givenAnnot.getIDF(), totalTermsGivenDoc) 
 								* probDocGivenTerm(0, totalTermsAnalyzedDoc) * givenAnnot.getIDF();
 						add = false;
-					}*/
+					}
 				}
 				if (addCommon && add) {
 					AnnotatedConcept annotConcept = new AnnotatedConcept();
